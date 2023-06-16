@@ -8,6 +8,12 @@
 
 <!-- css-->
 <!-- css bootstrap -->
+<style>
+  *{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+  }
+</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3269129977802298"
      crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -30,7 +36,26 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Home</title>
 </head>
-<body>
+<body  onload="countNumbers()" style="direction: rtl;">
+  
+ <div style="direction:rtl" class="my-5 alert alert-success alert-dismissible fade show" role="alert">
+      <strong class="text-danger"></strong>   مرحبا بك في صفحة الوكازي للخدمات الرقمية
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+  <section class="container my-5">
+   
+    <h1 class="my-5 text-danger fs-2 fw-bold">مرحبًا بك في  Wagazi Dev Company</h1>
+    <ul>
+      <li>
+           <p  class="text-muted fs-5 fw-bold">نحن نقدم حلولًا متميزة لإبداع وتطوير المواقع الإلكترونية. فريقنا من المطورين المحترفين ملتزم بتقديم أعلى جودة لعملائنا.</p>
+  
+      </li>
+      <li>
+         <p  class="text-muted fs-5 fw-bold">مهمتنا هي تحقيق رؤية عملائنا وتحويلها إلى واقع ملموس من خلال تصميم وبرمجة مواقع وتطبيقات ويب فريدة وذات تجربة مستخدم استثنائية.</p>
+  
+      </li>
+    </ul>
+  </section>
    <!-- nav bar session-->
   <div class="container-fluid m-0">
    
@@ -158,10 +183,28 @@
 
 <div class="container-fluid my-5 ">
 
-<div style="direction:rtl" class="alert alert-success alert-dismissible fade show" role="alert">
- <strong class="text-danger"></strong>   مرحبا بك في صفحة الوكازي للخدمات الرقمية
- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+  <script>
+    function countNumbers() {
+      let count = 0;
+      const countDisplay = document.getElementById("count-display");
+
+      const intervalId = setInterval(() => {
+        count+=1234;
+        countDisplay.innerText = count.toLocaleString();
+
+        if (count >= 1597701) {
+          clearInterval(intervalId);
+          count = 0;
+          countDisplay.innerText="1,597,701"
+          
+        }
+      }, 1);
+    }
+  </script>
+   <h1 class="text-center text-info fs-1 fw-bold">
+    انضم إلى <strong id="count-display"></strong> مالكٍ للمواقع الإلكترونية
+  </h1>
+
 
 <!-- start of corsurel -->
 
@@ -169,26 +212,35 @@
  <div class="carousel-inner " style=" max-height:660px">
  
    <div class="carousel-item active " data-bs-interval="500">
-     <img src="a.jpg" style="max-height: 230px;"  class="d-block w-100 img-fluid  image" alt="image1">
+     <img src="a.jpg" style="max-height: 530px;"  class="d-block w-100 img-fluid  image" alt="image1">
      <div class="carousel-caption d-none d-md-block">
-       <h5 class="text-dark fw-bold fs-4">Wagazi Dev </h5>
-       <p  class="text-light fw-bold fs-2">تصميم وتطوير المواقع الإلكترونية</p>
+       <h5 class="text-danger fw-bold fs-1">Wagazi Dev </h5>
+       <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">تصميم وتطوير المواقع الإلكترونية</p>
      </div>
 
    </div>
    <div class="carousel-item" data-bs-interval="500">
-     <img src="image1.jpg"  style="max-width:100%; max-height:230px"  class="d-block w-100 img-fluid  image" alt="image2">
-     <div class="carousel-caption d-none d-md-block">
-     <h5 class="text-dark fw-bold fs-4">Wagazi Dev </h5>
-       <p  class="text-light fw-bold fs-5">تطبيقات الجوال بطريقة مبتكرة</p>
-     </div>
+    <img src="image11.jpeg"  style="max-width:100%; max-height:530px"  class="d-block w-100 img-fluid  image" alt="image2">
+    <div class="carousel-caption d-none d-md-block">
+    <h5 class="text-danger fs-1 fw-bold fs-4">Wagazi Dev </h5>
+      <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">تطبيقات الجوال بطريقة مبتكرة</p>
+    </div>
 
-   </div>
+  </div>
+
+  <div class="carousel-item" data-bs-interval="500">
+    <img src="image1.jpg"  style="max-width:100%; max-height:530px"  class="d-block w-100 img-fluid  image" alt="image2">
+    <div class="carousel-caption d-none d-md-block">
+    <h5 class="text-danger fs-1 fw-bold ">Wagazi Dev </h5>
+      <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">  خدمات الترجمة و خدمات الويب</p>
+    </div>
+
+  </div>
    <div class="carousel-item"  data-bs-interval="1000">
-     <img src="image6.jpg"  style="max-width:100%; max-height:230px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
+     <img src="image6.jpg"  style="max-width:100%; max-height:530px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
      <div class="carousel-caption d-none d-md-block">
-     <h5 class="text-dark fw-bold fs-4">Wagazi Dev </h5>
-       <p  class="text-dark fw-bold fs-5"> نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت    </p>
+     <h5 class="text-danger fs-1 fw-bold ">Wagazi Dev </h5>
+       <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);"> نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت    </p>
      </div>
 
    </div>
@@ -221,7 +273,7 @@
 <img style="border-radius: 30px;box-shadow:1px 2px 1px black" class="img-fluid"src="a.jpg" alt="">
     </div>
      <div class="col-md-6 ">
-        <p class="fs-5 fw-bold text-muted text-center"> نحن متخصصون في تصميم وتطوير المواقع الإلكترونية وتطبيقات الجوال بطريقة مبتكرة وفريدة تلبي احتياجات عملائنا وتساعدهم على تحقيق أهدافهم الرقمية. نحن نعمل بفريق من المطورين والمصممين المحترفين لتوفير حلول مبتكرة تتماشى مع رؤية العملاء وتفوق توقعاتهم. بالإضافة إلى تصميم وتطوير المواقع والتطبيقات، نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت مثل التسويق الرقمي، تحسين محركات البحث، وحلول التجارة الإلكترونية. نحن نلتزم بتقديم خدمة استثنائية ونتائج متميزة لكل عميل نتعامل معه في واجازي ديف. ونفخر بخدمة مجتمع تاليوين والمنطقة المحيطة بها</p>
+        <p class="fs-2 fw-bold text-muted text-center"> نحن متخصصون في تصميم وتطوير المواقع الإلكترونية وتطبيقات الجوال بطريقة مبتكرة وفريدة تلبي احتياجات عملائنا وتساعدهم على تحقيق أهدافهم الرقمية. نحن نعمل بفريق من المطورين والمصممين المحترفين لتوفير حلول مبتكرة تتماشى مع رؤية العملاء وتفوق توقعاتهم. بالإضافة إلى تصميم وتطوير المواقع والتطبيقات، نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت مثل التسويق الرقمي، تحسين محركات البحث، وحلول التجارة الإلكترونية. نحن نلتزم بتقديم خدمة استثنائية ونتائج متميزة لكل عميل نتعامل معه في واجازي ديف. ونفخر بخدمة مجتمع تاليوين والمنطقة المحيطة بها</p>
      </div>
 
 
@@ -250,7 +302,7 @@
 
 <section class="services-section" id="services">
     <div class="container">
-      <h2 class="section-title">خدماتنا</h2>
+      <h2  style="text-shadow:1px solid red" class="section-title m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">خدماتنا</h2>
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="service-box">
@@ -275,7 +327,53 @@
         </div>
 
 
+       
 
+
+
+
+        <!-- Our Projects -->
+<section class="container mt-4">
+  <h2  style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">مشاريعنا</h2>
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <img src="commune.png"  style="max-height: 450px;"  class="card-img-top" alt="مشروع 1">
+        <div class="card-body">
+          <h5 class="card-title">  تطبيق لبلدية تالوين </h5>
+          <p class="card-text">تطبيق للجماعة الترابية لتالوين ،يقدم الخدمات لسكان المدينة عبر الانترنيت </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mb-4">
+        <img src="csnmaroc.png"  style="max-height: 450px;"  class="card-img-top" alt="مشروع 2">
+        <div class="card-body">
+          <h5 class="card-title"> المحاسبة و الخدمات</h5>
+          <p class="card-text">المحاسبة و الخدمات قما بتطوير صفحة لشركة امحاسبة والخدمات ف تلوين تقوم بعرض خدماتها</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mb-4">
+        <img src="scholarshipapplication.png"  style="max-height: 450px;"  class="card-img-top" alt="مشروع 2">
+        <div class="card-body">
+          <h5 class="card-title">طلب منح دراسية</h5>
+          <p class="card-text">تطبيق يقدم كل ماهو جديد من المنح الدراسية حول العالم</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mb-4">
+        <img src="fashionStore.png" style="max-height: 450px;" class="card-img-top" alt="مشروع 2">
+        <div class="card-body">
+          <h5 class="card-title">مشروع باستعمال الذكاء الاصطناعي</h5>
+          <p class="card-text">هدا المشروع عبارة عن تطبيق للبحت عن الألبسة باستعمال الذكاء اااصطناعي</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -286,22 +384,76 @@
           <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">خدماتنا </h1>
         
     
-      <div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;"  class="row p-3 my-3 border align-items-center rounded shadow">
-          
-          <div class="col-7   text-center text-danger">
-            <h1> التسجيل في مختلف منح العالم </h1>
-            <p class="text-success text-center fs-4 fw-bold text-dark">  
-            مكتبنا يقدم لكم جميع ما يخص المنح ويدلكم بجميع المعلوات التي تخص المنح ويقدم لكم مكتبنا هده الخدمة مع مقابل مادي  بسيط لتسهيل عليك القبول انشاء الله
-    
-    
-            </p>
-            <a href="" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-                
-          </div>
-          <div class="col-5">
-            <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image4.jpg" alt="image1" class="img-fluid h-100 w-100">
-          </div>
-        </div>
+     <!-- Section 2: Web Design -->
+<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
+  <div class="col-7 text-center text-danger">
+    <h1>تصميم مواقع الويب</h1>
+    <p class="text-success text-center fw-bold text-dark">
+      يقدم مكتبنا خدمات تصميم مواقع الويب المبتكرة والمتجاوبة. نحن نهتم بتقديم تجربة مستخدم فريدة وجذابة للمستخدمين، بما في ذلك تصميم الواجهة الجذابة وتنفيذ التطوير الخاص بالموقع. اطلب تصميم موقعك معنا اليوم وسنعمل معك على تحقيق رؤيتك الرقمية.
+    </p>
+    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
+  </div>
+  <div class="col-5">
+    <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image1.jpg" alt="image2" class="img-fluid h-100 w-100">
+  </div>
+</div>
+<!-- Section 3: Help Societies -->
+<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
+  <div class="col-7 text-center text-danger">
+    <h1>مساعدة المجتمعات</h1>
+    <p class="text-success text-center fw-bold text-dark">
+      نحن نعمل على توفير الدعم والمساعدة للمجتمعات المحلية. نحن نؤمن بأهمية بناء المجتمعات المتكاملة والمستدامة. نقدم العديد من الخدمات والمشاريع التي تهدف إلى تطوير وتعزيز المجتمعات، بما في ذلك البرامج التعليمية والتدريبية والمشاريع الاجتماعية. انضم إلينا اليوم للمساهمة في تحقيق التغيير الإيجابي.
+    </p>
+    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
+  </div>
+  <div class="col-5">
+    <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image10.jpeg" alt="image3" class="img-fluid h-100 w-100">
+  </div>
+</div>
+
+<!-- Section 4: Web Consulting -->
+<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
+  <div class="col-7 text-center text-danger">
+    <h1>استشارات الويب</h1>
+    <p class="text-success text-center fw-bold text-dark">
+      نحن نقدم خدمات استشارية في مجال تطوير الويب والتسويق الرقمي. سواء كنت تبدأ في إنشاء موقع ويب جديد أو تحسين موقعك الحالي، فإننا نوفر لك النصائح والاستراتيجيات اللازمة لتحقيق أهدافك على الإنترنت. فريقنا المتخصص سيقدم لك المشورة المهنية ويعمل معك على تحقيق النجاح الرقمي لعملك.
+    </p>
+    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
+  </div>
+  <div class="col-5">
+    <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image4.jpg" alt="image4" class="img-fluid h-100 w-100">
+  </div>
+</div>
+
+
+<!-- Section 6: Video Editing -->
+<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
+  <div class="col-7 text-center text-danger">
+    <h1>تحرير الفيديو</h1>
+    <p class="text-success text-center fw-bold text-dark">
+      نحن نقدم خدمات تحرير الفيديو الاحترافية. سواء كنت بحاجة إلى تحرير فيديوهات ترويجية، مقاطع فيديو قصيرة، فيديوهات حفلات أو أي نوع آخر من تحرير الفيديو، فإن فريقنا المتخصص يمتلك المهارات والأدوات اللازمة لإنشاء محتوى فيديو مميز وجذاب. احصل على فيديوهات احترافية تلبي احتياجاتك وتساعدك على نشر رسالتك بفعالية.
+    </p>
+    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
+  </div>
+  <div class="col-5">
+    <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="videoediting.webp" alt="image6" class="img-fluid h-100 w-100">
+  </div>
+</div>
+
+
+<!-- Section 5: Web and Mobile Development -->
+<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
+  <div class="col-7 text-center text-danger">
+    <h1>تطوير الويب والتطبيقات المحمولة</h1>
+    <p class="text-success text-center fw-bold text-dark">
+      نحن نوفر خدمات تطوير الويب وتطبيقات الجوال الاحترافية. سواء كنت تحتاج إلى بناء موقع ويب مخصص أو تطبيق محمول لأجهزة Android و iOS، فإننا نمتلك الخبرة والمهارات اللازمة لتلبية احتياجاتك. فريق المطورين لدينا يعمل بجد لتقديم منتج نهائي مبتكر وفعال يلبي متطلباتك الفردية ويوفر تجربة مستخدم ممتازة.
+    </p>
+    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
+  </div>
+  <div class="col-5">
+    <img style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image2.jpg" alt="image5" class="img-fluid h-100 w-100">
+  </div>
+</div>
     
     
     
@@ -309,7 +461,7 @@
           
           <div class="col-7  text-center text-danger">
             <h1> خدمة الترجمة  </h1>
-            <p class="text-success text-center fs-4 fw-bold text-dark">  
+            <p class="text-success text-center  fw-bold text-dark">  
          مكتبنا يقدم لكم جميع ما يخص خدمة الترجمة بجميع اللغات فريقنا يسعادكم عل ترجمة جميع الوتائق و الملفات في وقت وجيز وباحترافية عالية
     
     
@@ -326,26 +478,7 @@
     </div>
      
     
-    <div  style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;"  class="row p-3 my-3 border align-items-center rounded shadow">
-          
-          <div class="col-7  text-center text-danger">
-            <h1>   العمل في الخارج  </h1>
-            <p class="text-success text-center fs-4 fw-bold text-dark">  
-            مكتبنا يقدم لكم جميع العلومات المتعلقة بالعمل بالخرج وكل الشركات المعلنة عليها في كل بقاع العالم ، حيت سنشرح لك جميع التفاصيل المتعلقة به و كذا الوثائق المطلوبة بما في ذلك الإختبرات 
-       
     
-    
-            </p>
-            <a href="" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-                   
-          </div>
-          <div class="col-5">
-            <img  style="border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image6.jpg" alt="image1" class="img-fluid h-100 w-100 rounded">
-          </div>
-     
-    
-    
-    </div>
      
         
     
@@ -510,241 +643,367 @@
      
       
     
-      <div class=" container mt-5"  id="contact">
-        <div class="row d-flex align-items-centern justify-content-center"  >
-          
-            <div class="col-12 col-md-6  d-flex flex-column align-items-center justify-content-center">
-               
-                <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold"> تساؤل  </h1>
-   
-    
-    
-    
-                
-                <form action="" method="post" class="form shadow bg-light w-100 p-4 mb-5 bordered bounded  form-secondary "  enctype="multipart/form-data">
-    
-                  <div class="form-group " >
-    
-    
-    
-                <div class="text-center">
-                  <div class="d-flex flex-column m-3 p-5s">
-                  <label for="image">
-    
-    
-                    <img width="150px"id="imagePreview2" height="120px" style="border-radius: 50%;" src="image2.jpg" alt="">
-    
-    
-                  </label>
-           
-                <h6 class="text-center">Contactez-nous</h6>
-                
-                </div>
-                </div>
-    
-              
-                  
-                  </div>
-            
-                  <div class="form-group">
-                    <label for="first_name" class="form-label text-muted fs-4  fw-bold">Name: <strong class="text-danger">*</strong></label>
-                    <input type="text" class="form-control" id="first_name" placeholder="Enter your name"  name="first_name">
-                  </div>
-
-                  <div class="form-group" >
-                    <label for="email" class="form-label text-muted  fs-4  fw-bold">Email: <strong class="text-danger">*</strong></label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
-                  </div>
-                       
-   
-               
-       
-                  <div class="form-group">
-                    <label for="telephone" class=" form-label text-muted fs-4  fw-bold">Message <strong class="text-danger">*</strong></label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="write the message" class="form-control"></textarea>
-                  </div>
-    
-      
-    
-                  <button type="submit" class="btn btn-primary w-100 my-2 fs-4" class="text-light fs-3  fw-bold" name="submit">Envoyer</button>
-                </form>
-            </div>
-        </div>
-       
-      </div>
   
-    
-    
    
     
 
    </div>
 
 
-<div class="container my-2" id="avis">
- <h1 class="text-center fs-1 text-muted text-decoration-underline fw-bold ">اراء الزوار </h1>
- <div class="row">
 
-  <div class=" col-md-4  my-2  col-md-3" style="">
-    <div class="card" style="background-color: #FEFCF3;">
-     
-        <div class="card-body">
-           
-                <img   class="img-fluid mr-0"  style="width: 100% !important;border-radius:10px;box-shadow: 1px 2px 4px 1px white  ;"  src="image1.jpg" alt="">
-         <div class="card-text fs-5 text-center fw-bold">
-             This is the best web i have seen forall this time
-            </div>
-
-        </div>
-        <div class="card-footer text-center d-flex justify-content-around align-items-center">
-            <h1 class="p-0 fs-4 text-muted fw-bold m-0">Abdelaaziz Sabri</h1>
-            <div class="text-center">
-                <a href="#avis" class="btn  ">
-                    
-                <button type="button" class="btn   position-relative">
-          <i class="bi btn btn-outline-danger  bi-heart-fill"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-          <strong>20</strong>
-          <span class="visually-hidden">unread messages</span>
-          </span>
-          </button>
-               </a>
-             
-             
-              </div>
-        
-        </div>
-         <div class="text-center">
-                   <h6 class="text-center text-muted">2023-5-6</h6>
-               </div>
-            </div>
-        </div>
-
-
-
-  <div class=" col-md-4  my-2  col-md-3" style="height: 200px !important;">
-    <div class="card" style="background-color: #FEFCF3;">
-     
-        <div class="card-body">
-           
-                <img   class="img-fluid mr-0"  style="height:200px !important;width: 100% !important;border-radius:10px;box-shadow: 1px 2px 4px 1px white  ;"  src="image1.jpg" alt="">
-         <div class="card-text fs-5 text-center fw-bold">
-             This is the best web i have seen forall this time
-            </div>
-
-        </div>
-        <div class="card-footer text-center d-flex justify-content-around align-items-center">
-            <h1 class="p-0 fs-4 text-muted fw-bold m-0">Abdelaaziz Sabri</h1>
-            <div class="text-center">
-                <a href="#avis" class="btn  ">
-                    
-                <button type="button" class="btn   position-relative">
-          <i class="bi btn btn-outline-danger  bi-heart-fill"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-          <strong>20</strong>
-          <span class="visually-hidden">unread messages</span>
-          </span>
-          </button>
-               </a>
-             
-             
-              </div>
-        
-        </div>
-         <div class="text-center">
-                   <h6 class="text-center text-muted">2023-5-6</h6>
-               </div>
-            </div>
-        </div>
-
-
-
-  <div class=" col-md-4  my-2  col-md-3" style="height: 200px !important;">
-    <div class="card" style="background-color: #FEFCF3;">
-     
-        <div class="card-body">
-           
-                <img   class="img-fluid mr-0"  style="height:200px !important;width: 100% !important;border-radius:10px;box-shadow: 1px 2px 4px 1px white  ;"  src="image1.jpg" alt="">
-         <div class="card-text fs-5 text-center fw-bold">
-             This is the best web i have seen forall this time
-            </div>
-
-        </div>
-        <div class="card-footer text-center d-flex justify-content-around align-items-center">
-            <h1 class="p-0 fs-4 text-muted fw-bold m-0">Abdelaaziz Sabri</h1>
-            <div class="text-center">
-                <a href="#avis" class="btn  ">
-                    
-                <button type="button" class="btn   position-relative">
-          <i class="bi btn btn-outline-danger  bi-heart-fill"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-          <strong>20</strong>
-          <span class="visually-hidden">unread messages</span>
-          </span>
-          </button>
-               </a>
-             
-             
-              </div>
-        
-        </div>
-         <div class="text-center">
-                   <h6 class="text-center text-muted">2023-5-6</h6>
-               </div>
-            </div>
-        </div>
-
-
-    
- 
-
-
-
-
-
-  
-   
-    </div> </div> 
 
 
 <!-- fin avis de clients-->
+<!-- Products/Services -->
+<section class="container mt-4">
+  <h2  style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">منتجاتنا / خدماتنا</h2>
+  <div class="row">
+    <style>
+.ser{
+ padding: 10px;
+}
+.ser:hover{
+ transform: scale(1.02);
+ cursor: pointer;
+ transition: all ease .2;
+}
+    </style>
+    <div class="col-md-4 ser">
+      <img src="image12.jpeg"  style="max-height: 250px;"  class="w-100" alt="المنتج 1">
+      <h4 class="text-muted text-decoration-underline">تطوير المواقع الإلكترونية</h4>
+      <p class="text-muted">نقدم خدمات تصميم وبرمجة مواقع ويب مبتكرة ومتجاوبة تلبي احتياجات عملك وتعزز وجودك الرقمي.</p>
+    </div>
+    <div class="col-md-4 ser">
+      <img src="image14.jpeg" style="max-height: 250px;" class="w-100" alt="المنتج 2">
+      <h4 class="text-muted text-decoration-underline">تطوير تطبيقات الويب</h4>
+      <p class="text-muted">نحوّل أفكارك إلى تطبيقات ويب قوية وذكية توفر تجربة مستخدم مثالية وتحقق أهداف عملك.</p>
+    </div>
+    <div class="col-md-4 ser">
+      <img src="image13.jpeg"  style="max-height: 250px;"  class="w-100" alt="المنتج 3">
+      <h4 class="text-muted text-decoration-underline">استشارات تقنية</h4>
+      <p class="text-muted">نقدم خدمات استشارية متخصصة في مجال تطوير الويب، مساعدتك في اتخاذ القرارات الصائبة لتحقيق أهدافك التقنية.</p>
+    </div>
+  </div>
+</section>
 
 
 
+
+
+
+
+<section class="container mt-4">
+  <h2 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline fs-1 fw-bold">فريقنا</h2>
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-4 d-flex align-items-center text-center">
+      <div style="width:500px;box-shadow: 2px 1px 2px 1px gray;"class="card mb-4 text-center">
+        <img src="nki.jpg" style="max-height:200px" class="card-img-top" alt="عضو الفريق 1">
+        <div class="card-body text-center">
+          <h5 class="card-title fs-2 text-decoration-underline">عبد العزيز صبري</h5>
+          <p class="card-text text-muted fs-3">مطوّر ويب</p>
+        </div>
+      </div>
+    </div>
+    <div class="fs-2 col-mg-8">
+      <h1 class="text-center fs-1 text-success fw-bold">عالم بيانات: طالب في السنة الثانية من تخصص الذكاء الاصطناعي وعلوم البيانات</h1>
+      <h4 class="fs-1 text-primary text-decoration-underline my-3">الملف الشخصي</h4>
+      <p>أنا طالب حاليًا في السنة الثانية في تخصص الذكاء الاصطناعي وعلوم البيانات في مدرسة التكنولوجيا العليا بالصويرة. أنا متحمس ومتحفز ومتواصل، ولدي مهارات في البرمجة بشكل عام بما في ذلك Python و SQL و PHP... أستطيع  تطوير مهاراتي وتطبيق معرفتي.</p>
+
+php
+
+  <h4  class="fs-1 text-primary text-decoration-underline my-3">المهارات</h4>
+  <ul>
+    <li>معرفة في برمجة Python و Java و PHP</li>
+    <li>التلاعب بقواعد البيانات باستخدام لغات SQL و MongoDB</li>
+    <li>مهارات في الإحصاء الوصفي والاستدلالي</li>
+    <li>خبرة في استخدام مكتبات Python لتحليل البيانات مثل NumPy و Pandas و Matplotlib</li>
+    <li>مهارات في تحليل البيانات وتصورها وتحضيرها</li>
+    <li>خبرة في تقنية الويب مع (HTML و CSS و Bootstrap و JS و PHP...)</li>
+    <li>معرفة في التعلم الآلي والذكاء الاصطناعي</li>
+    <li>مهارات جيدة في التواصل والعمل الجماعي</li>
+  </ul>
+
+  <h4 class="fs-1 text-primary text-decoration-underline my-3">الاتصال</h4>
+  <h6 class="fs-4">الهاتف: <strong>0671344804</strong></h6>
+  <h6 class="fs-4">البريد الإلكتروني: <strong>azizsabri072@gmail.com</strong></h6>
+
+  <h4 class="fs-1 text-primary text-decoration-underline my-3">المشاريع</h4>
+  <ul>
+    <li>موقع ويب (CSN ماروك) باستخدام PHP و CSS و Bootstrap</li>
+    <li>موقع ويب ديناميكي يقدم منحًا جديدة للدراسة في الخارج</li>
+    <li>تطبيق شبكة عصبية على MNIST Fashion باستخدام</li>
+    <li>توقع أسعار العقارات باستخدام نموذج الانحدار في تعلم الآلة</li>
+    <li>موقع ويب (easy english)</li>
+    <li>تطبيق البعثات الدراسية (Scholarship application)</li>
+  </ul>
+
+  <h1 class="fs-1 text-primary text-center">
+    <button class="btn" style="font-size: 27px;width: 200px;"><a href="https://www.linkedin.com/in/sabriabdelaaziz/" class="btn btn-primary" style="width: 100px;"><i class=" btn btn-primary bi bi-linkedin"></i></a></button>
+    <button class="btn" style="font-size: 27px; width: 200px;"><a href="https://github.com/sabri-abdelaaziz" class="btn btn-primary" style="width: 100px;"><i class="btn btn-primary bi bi-github"></i></a></button>
+  </h1>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     <div class=" container mt-5"  id="contact">
+      <div class="row d-flex align-items-centern justify-content-center"  >
+        <div class="col-md-6">
+          <img class="img-fluid w-100" src="image16.jpeg" alt="">
+
+        </div>
+
+
+
+        
+        
+          <div class="col-12 col-md-6  d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-center fs-1 fw-bold text-danger">الموقع : حي  تابيا تالوين </h1>
+                <section class="w-100">
+              <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6">
+              </div>
+                <div class="">
+                  <iframe style="width: 100%; height: 400px; border-radius: 30px;box-shadow: 10px 5px 10px black;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117725.20719138842!2d-8.897247780587425!3d30.73250107605232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaa45207c32bc85%3A0x479b2846c736a6f7!2sTaliouine!5e0!3m2!1sen!2sma!4v1676112305036!5m2!1sen!2sma" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   
+                </div>
+              </div>
+                  <!-- تعديل الموقع المضمن حسب الكود الذي حصلت عليه من موقع جوجل ماب -->
+                       
+                      
+                 
+            </section>
+              <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold"> تساؤل  </h1>
+ 
+  
+  
+  
+              
+              <form action="" method="post" class="form shadow bg-light w-100 p-4 mb-5 bordered bounded  form-secondary "  enctype="multipart/form-data">
+  
+                <div class="form-group " >
+  
+  
+  
+              <div class="text-center">
+                <div class="d-flex flex-column m-3 p-5s">
+                <label for="image">
+  
+  
+                  <img width="150px"id="imagePreview2" height="120px" style="border-radius: 50%;" src="image1.jpg" alt="">
+  
+  
+                </label>
+         
+              <h6 class="text-center">Contactez-nous</h6>
+              
+              </div>
+              </div>
+  
+            
+                
+                </div>
+          
+                <div class="form-group">
+                  <label for="first_name" class="form-label text-muted fs-4  fw-bold">Name: <strong class="text-danger">*</strong></label>
+                  <input type="text" class="form-control" id="first_name" placeholder="Enter your name"  name="first_name">
+                </div>
+
+                <div class="form-group" >
+                  <label for="email" class="form-label text-muted  fs-4  fw-bold">Email: <strong class="text-danger">*</strong></label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                </div>
+                     
+ 
+             
+     
+                <div class="form-group">
+                  <label for="telephone" class=" form-label text-muted fs-4  fw-bold">Message <strong class="text-danger">*</strong></label>
+              <textarea name="" id="" cols="30" rows="10" placeholder="write the message" class="form-control"></textarea>
+                </div>
+  
+    
+  
+                <button type="submit" class="btn btn-primary w-100 my-2 fs-4" class="text-light fs-3  fw-bold" name="submit">Envoyer</button>
+              </form>
+          </div>
+      </div>
+     
+    </div>
+
+  
+  
+
+<section class="container mt-4 fs-2">
+  <p> فريق من المطورين والمصممين المبدعين يتخصصون في تطوير وتصميم المواقع الإلكترونية عالية الجودة.</p>
+ <p>نحن نهتم بتقديم حلول مخصصة لعملائنا ونسعى جاهدين لتحقيق رؤية عملائنا وتلبية احتياجاتهم بشكل فعّال.</p>
+ <p>مع خبرتنا الواسعة في مجال تطوير الويب والتكنولوجيا الحديثة، نحن نضمن تقديم منتج نهائي مميز ومبتكر يساعدك في تحقيق نجاحك الرقمي.</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Hosting Plans -->
+<section class="container mt-4">
+  <h2  style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">استضافة مواقع مميّزة</h2>
+
+  <!-- Plan 1 -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title">خطة مثالية للمواقع الشخصية</h5>
+          <p class="card-subtitle mb-2 text-muted">السعر: <del>$11.99</del> $2.59 /الشهر</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <li>100 موقع</li>
+            <li>كمية نقل البيانات غير محدودة</li>
+            <li>قرص SSD سعة 100GB</li>
+            <li>دومين مجاني (بقيمة $9.99)</li>
+            <li>SSL مجاني غير محدود</li>
+            <li>نسخ احتياطية أسبوعية</li>
+            <li>CDN مجاني</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title">استضافة مواقع أعمال</h5>
+          <p class="card-subtitle mb-2 text-muted">السعر: <del>$16.99</del> $3.99 /الشهر</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <li>100 موقع</li>
+            <li>كمية نقل البيانات غير محدودة</li>
+            <li>قرص SSD سعة 200GB</li>
+            <li>دومين مجاني (بقيمة $9.99)</li>
+            <li>SSL مجاني غير محدود</li>
+            <li>نسخ احتياطية يومية (بـ$25.08/سنة)</li>
+            <li>CDN مجاني</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title">سحابة للشركات الناشئة</h5>
+          <p class="card-subtitle mb-2 text-muted">السعر: <del>$19.99</del> $9.99 /الشهر</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <li>300 موقع</li>
+            <li>كمية نقل البيانات غير محدودة</li>
+            <li>قرص SSD سعة 200GB</li>
+            <li>دومين مجاني (بقيمة $9.99)</li>
+            <li>SSL مجاني غير محدود</li>
+            <li>نسخ احتياطية يومية (بـ$25.08/سنة)</li>
+            <li>CDN مجاني</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+              </div>
+           </section>
+
+
+
+
+      
+           
+            
+
+      
 
 
 <!-- footer-->
 <div class="container-fluid my-4">
-<footer style="background: #E3E6E3 !important;border-top:2px solid black !important;margin-bottom: 0;" id="footer" class="footer w-100 my-4  p-4">
+<footer style="background: #799279 !important;border-top:2px solid black !important;margin-bottom: 0;" id="footer" class="footer w-100 my-4  p-4">
     <div style="direction: rtl;" class="row d-flex align-items-center justify-content-around ">
-        <style>
-            /* أسلوب CSS لتحديد شكل العلامة */
-            .map-marker {
-              background-image: url('https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png');
-              background-size: cover;
-              width: 50px;
-              height: 50px;
-              cursor: pointer;
-            }
-          </style>
        
+  
    
-      <div class="col-12 text-center col-md-5">
+      <div class="col-12 text-center col-md-4">
 
 
 
+        
+        
             <!-- تعديل الموقع المضمن حسب الكود الذي حصلت عليه من موقع جوجل ماب -->
            
-                <iframe style="width: 100%; height: 400px; border-radius: 30px;box-shadow: 10px 5px 10px black;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117725.20719138842!2d-8.897247780587425!3d30.73250107605232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaa45207c32bc85%3A0x479b2846c736a6f7!2sTaliouine!5e0!3m2!1sen!2sma!4v1676112305036!5m2!1sen!2sma" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-     
-        
+            <div id="carouselExampleInterval1"  class="carousel slide w-100" data-bs-ride="carousel">
+              <div class="carousel-inner " style=" max-height:460px">
+              
+                <div class="carousel-item active " data-bs-interval="500">
+                  <img src="csnmaroc.png" style="max-height: 200px;"  class="d-block w-100 img-fluid  image" alt="image1">
+                  <div class="carousel-caption d-none d-md-block">
+            </div>
+             
+                </div>
+                <div class="carousel-item" data-bs-interval="500">
+                  <img src="commune.png"  style="max-width:100%; max-height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
+                  <div class="carousel-caption d-none d-md-block">
+                
+                  </div>
+             
+                </div>
+                <div class="carousel-item" data-bs-interval="500">
+                  <img src="fashionStore.png"  style="max-width:100%; max-height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
+                  <div class="carousel-caption d-none d-md-block">
+               </div>
+             
+                </div>
+                <div class="carousel-item"  data-bs-interval="1000">
+                  <img src="scholarshipapplication.png"  style="max-width:100%; max-height:200px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
+                  <div class="carousel-caption d-none d-md-block">
+           </div>
+             
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+             </div>
+             
+             
         
       </div>
+        
+  
       
 
 
-      <div class="col-12 text-center col-md-5">
+      <div class="col-12 text-center col-md-4">
         <h1 class="text-center text-dark lead fs-2 w-100 p-3">   تواصل معنا </h1>
  <div class="text-center  btn-group p-2  my-2">
 
