@@ -1,0 +1,26 @@
+<div class="container-fluid my-1 ">
+
+    <script>
+      function countNumbers() {
+        let count = 0;
+        const countDisplay = document.getElementById("count-display");
+  
+        const intervalId = setInterval(() => {
+          count+=1;
+          countDisplay.innerText = count.toLocaleString();
+  
+          if (count >= 9) {
+            clearInterval(intervalId);
+            count = 0;
+            countDisplay.innerText="9"
+            
+          }
+        }, 150);
+      }
+    </script>
+     <h1 class="text-center text-decoration-underline fs-1 fw-bold">
+      Sabri Abdelaaziz </h1>
+     
+       <p style="text-align: center;" class="fs-4">Hello ! Glad to see you here. This is my Porfolio a collection of my personal projects made during free time, school and internships.</p>
+   
+  </div>

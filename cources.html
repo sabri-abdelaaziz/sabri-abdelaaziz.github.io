@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .roadmap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background-color: #f5f5f5; /* Background color for the section */
+    }
+    
+    .road {
+        position: relative;
+        width: 80%; /* Width of the road */
+        height: 50px; /* Height of the road */
+        background: linear-gradient(to right, #8e7523, #8a4516); /* Road color */
+        border-radius: 25px; /* Round the edges of the road */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .point {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .point .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ffffff; /* Circle color */
+        border: 2px solid #6b8e23; /* Circle border color */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .point .label {
+        margin-top: 5px;
+        font-size: 10px;
+        font-weight: bold;
+        color: #333; /* Label color */
+    }
+    
+    .point[data-year="2021"] { left: 5%; top: -20px; }
+    .point[data-year="2022"] { left: 15%; top: -20px; }
+    .point[data-year="2023"] { left: 46%; top: -20px; }
+    .point[data-year="2024"] { left: 75%; top: -20px; }
+    .point[data-year="2025"] { left: 95%; top: -20px; }
+    
+    .point:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 20px; /* Height of the vertical line */
+        background-color: #6b8e23; /* Vertical line color */
+        left: 50%; /* Center the line */
+        top: 10px; /* Positioning */
+        z-index: -1; /* Send the line behind the points */
+        border-radius: 10px 1px 10px 1px;
+    }
+    
+    .point:first-child:before {
+        display: none; /* Hide the line before the first point */
+    }
+    
+    </style>
+    <div class="roadmap">
+        <div class="road">
+         
+            <div class="point" data-year="2021">
+                <div class="circle"></div>
+                <div  class="dev">
+                    <h5 style="font-size: 14px;">Baccalauriate</h5>
+                    <h6 style="font-size: 14px;">2021</h6>
+                    <h6 style="font-size: 14px;">PHYSIQUE</h6>
+                </div>
+            </div>
+            <div class="point" data-year="2022">
+                <div class="circle"></div>
+                <div class="dev">
+                    <h5 style="font-size: 14px;">University diplomat of technology</h5>
+                    <h6 style="font-size: 14px;">2022-2023</h6>
+                    <h6 style="font-size: 14px;">BUSINESS INTELLIGENCE AND DATA SCIENCE </h6>
+                </div>
+            </div>
+            <div class="point" data-year="2023">
+                <div class="circle"></div>
+                <div class="dev">
+                    <h5 style="font-size: 14px;">Bachlor degree</h5>
+                    <h6 style="font-size: 14px;">2024</h6>
+                    <h6 style="font-size: 14px;">DATA ANALYTICS AND ARTIFICIAL INTILLIGENCE</h6>
+                </div>
+            </div>
+            <div class="point" data-year="2024">
+                <div class="circle"></div>
+                <div class="dev">
+                    <h5 style="font-size: 14px;" >Master Degree</h5>
+                    <h6 style="font-size: 14px;">2026</h6>
+                    <h6 style="font-size: 14px;">DATA ANALYTICS AND ARTIFICIAL INTILLIGENCE</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

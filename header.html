@@ -1,211 +1,60 @@
-
-
-<nav  style="z-index:1 !important;direction:rtl; top:0;"    style=" background-color: #D3D3D3;" class="navbar w-100 navbar-expand-lg bg-body-tertiary position-fixed  z-index-1001">
-
-    <div style=" background-color: #D3D3D3;" class="container-fluid  p-2 d-flex align-items-center ">
-      <a  style="height:50px;width:50px;" class="navbar-brand " href="" ><img class="img-fluid"  src="a.jpg" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+<nav  style="background-color:#436850 !important;max-height: 100px !important; position: fixed;top:0;width: 100%;  z-index: 9999; " class="navbar p-1 navbar-expand-lg bg-body-tertiary"  >
+  <!-- Navbar -->
+  
+    <div class="container-fluid">
+      <a class="navbar-brand p-1 " href="/">
+        <div class="d-flex align-items-center justify-content-evenly ">
+           <img style="height:40px !important ;border-radius:20px; width:60px;"  class="img-fluid" src="nki.jpg" alt="">
+         <div class="p-3">
+          <h4 class="text-light">Sabri Abdelaaziz</h4>
+          <h6 class="text-light">Data science and AI mobile Developer</h6>
+         </div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-   
   
-  
-          <li class="nav-item">
-            <a class="nav-link active fs-5 btn btn-outline-danger text-primary fw-bold links" aria-current="page" href="" >تسجيل الخروج</a>
-          </li>
+
+      
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">WagDev</h5>
+
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex align-items-center justify-content-end">
           
-  
-  
-       
-  
-  
-  
-  
+          <ul style="float: right !important;" class="navbar-nav d-flex justify-content-end align-items-center  w-100" >
             <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links "  aria-current="page" href="" >الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" >نبدة عنا </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="" >منح حول العالم</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="" > اطلب الان</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" >تساؤل</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="" > خدماتنا</a>
-          </li>
-          <li class="nav-item">
-        
-        <a href="" type="button" class="nav-link active  fs-5 fw-bold links " data-bs-toggle="modal" data-bs-target="#exampleModal">
-        تواصل معنا
-      </a>
-      </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle links fs-5 fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              المزيد 
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item " href=""> جميع المنح</a></li>
-              <li><a class="dropdown-item " href="">>  خدمة الترجمة </a></li>
-              <li><a class="dropdown-item " href=""> اراء الزوار</a></li>
-              <li><a class="dropdown-item  " href="#footer"> تواصل معنا</a>
-            
-            <!-- Button trigger modal -->
-  
-            
+              <a class="nav-link active fs-5 fw-bold links "  aria-current="page" href="" >Home</a>
             </li>
-  
-            
-            
-            </ul>
-          </li>
-  
-        <li class="nav-item">
-            <a class="nav-link active mx-2 btn btn-outline-danger text-warning fw-bold links" aria-current="page" href=<?php echo $logout; ?> >تسجيل الخروج</a>
-          </li>
-  
-          
-          <li class="nav-item">
-            <a class="nav-link active  btn btn-outline-primary text-warning fw-bold links" aria-current="page" href=<?php echo $modify_count."?id=".$_SESSION["id_client"];?> >تعديل الحساب</a>
-          </li>
-        
-  
-  
-          </div>
-  
-          <form class="d-flex " role="search" action=""> method="post">
-        
-          <div class="d-flex align-items-center">
-    
-      <input class="form-control me-2" type="search" name="data" placeholder="...    ابحت عن المنح هنا   " aria-label="Search" required>
-      <div class="invalid-feedback">
-      لاتوجد نتيجة
-      </div>
-    </div>
-    <button class="btn btn-success m-2" type="submit" >بحث   </button>
-      
-        </form>
-          
-  
-  
-  
-  
-  
-  
-  
-              <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links "  aria-current="page" href="" >الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" > من نحن </a>
-          </li>
-            
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href=""> >تساؤل</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" >خدماتنا </a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="">منح حول العالم</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="" > اطلب الان</a>
-          </li>
-          <li class="nav-item">
-        
-        <a href="" type="button" class="nav-link active  fs-5 fw-bold links " data-bs-toggle="modal" data-bs-target="#exampleModal">
-        تواصل معنا
-      </a>
-      </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" >انشاء حساب</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="" >تسجيل الدخول</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle links fs-5 fw-bold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              المزيد 
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-center links fs-4 " href=""> جميع المنح</a></li>
-              <li><a class="dropdown-item text-center links fs-4 " href="">  خدمة الترجمة </a></li>
-              <li><a class="dropdown-item text-center links fs-4 " href=""> اراء الزوار</a></li>
-              <li><a class="dropdown-item  text-center links fs-4 " data-bs-toggle="modal" data-bs-target="#exampleModal" href=""> تواصل معنا</a>
-            </ul>
-            <!-- Button trigger modal -->
-  
-            
+            <li class="nav-item">
+              <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="#about" >About</a>
             </li>
-         
-            <form class="d-flex " role="search" action=""> method="post">
-        
-        <div class="d-flex align-items-center">
-  
-    <input class="form-control me-2" type="search" name="data" placeholder="...    ابحت عن المنح هنا   " aria-label="Search" required>
-    <div class="invalid-feedback">
-    لاتوجد نتيجة
-    </div>
-  </div>
-  <button class="btn btn-success m-2" type="submit" >بحث   </button>
-    
-      </form>
-  
-  
-        
-         
+            <li class="nav-item">
+              <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="#projects" >Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active  fs-5  fw-bold links" aria-current="page" href="#skills" > Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-1 fw-bold links" aria-current="page" href="" >Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="" > Projects</a>
+            </li>
+
+            <li class="nav-item">
+          
+          <a href="" type="button" class="nav-link active  fs-5 fw-bold links " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Contact Us
+        </a>
+        </li>
       
-   
-     
-            </ul> 
-     
-      
-         
-  
+          </ul>
+
+        </div>
       </div>
     </div>
   </nav>
-  
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-        
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center text-primary fs-3">
-        <p>تواصل معناعلي مواقع التواصل الإجتماعي</p>
-  
-        <div class="text-center  btn-group d-flex  m-2">
-          
-            
-          <a  style="border-radius:50%" href="https://www.facebook.com/people/%D8%B7%D9%84%D8%A8-%D9%85%D9%86%D8%AD%D8%A9-%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9/100086525440139/" class=" btn btn-primary  mx-2 " title="our facebook group"> <i class="bi bi-facebook"></i></a>
-         <a  style="border-radius:50%" href="https://www.youtube.com/channel/UCmKzHOR8eCiewGO-56oX4Pw" class="  btn btn-danger border  mx-2 " title=" our youtube channel"><i class="bi bi-youtube"></i></a>
-         <a style="border-radius:50%" href="https://t.me/MINHADIrassia" class=" btn btn-secondary border  mx-2 " title="our telegram account group"><i class="bi bi-telegram"></i></a>
-     
-       <a style="border-radius:50%" href="https://mail.google.com/mail/?view=cm&fs=1&to=minhadirassia@gmail.com&su=%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9&body=%D9%87%D9%84%20%D9%8A%D9%85%D9%83%D9%86%D9%83%D9%85%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%AA%D9%8A%D8%9F" class="  btn btn-warning border  mx-2  " title="contact us at email"><i class="bi bi-envelope"></i></a>
-       <a style="border-radius:50%" href="https://wa.me/+212622863603?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%8C%20%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%AD%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%D8%A9%20%D8%9F%20" class="  btn btn-success border  mx-2 " title="contact us at whatssap"><i class="bi bi-whatsapp "></i></a>
-  
-      
-        </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">رجوع</button>
-         
-  
-        </div>
-      </div>
-    </div>
-  </div>

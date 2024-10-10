@@ -12,54 +12,7 @@
     box-sizing: border-box;
   }
 
-  .services-section {
-    background-color: #f5f5f5;
-    padding: 80px 0;
-    cursor: pointer;
-  }
   
-  .services-section .section-title {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .services-section .service-box {
-    background-color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .services-section .service-box:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    transform: translateY(-10px);
-  }
-  
-  .services-section .service-box i {
-    font-size: 48px;
-    color: #5f5f5f;
-    margin-bottom: 20px;
-    display: block;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .services-section .service-box h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .services-section .service-box p {
-    font-size: 16px;
-    color: #7f7f7f;
-    line-height: 24px;
-    transition: all 0.3s ease-in-out;
-  }
   
   
       form{
@@ -74,7 +27,7 @@
        
      
       a>img:hover{
-        box-shadow:inset 2px 2px 2px 4px aqua;
+        box-shadow:inset 2px 2px 2px 4px rgb(160, 116, 140);
         transform: rotate(0.9) !important;
     
       }
@@ -87,6 +40,19 @@
  cursor: pointer;
  transition: all ease .2;
 }
+
+
+
+   
+
+    
+
+    h1.text-center {
+      text-align: center;
+      color: #333; /* Dark text color */
+      font-size: 2.5rem; /* Font size */
+      font-weight: bold; /* Font weight */
+    }
     </style>
 
 
@@ -120,342 +86,138 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Wagdev </title>
 </head>
-<body  onload="countNumbers()" style="direction: rtl;">
+<body  onload="countNumbers()" >
 
 
 
+  <div id="header_content"></div>
 
-  <nav  style="background-color:#436850 !important;max-height: 100px !important; position: fixed;top:0;width: 100%;  z-index: 9999; " class="navbar p-1 navbar-expand-lg bg-body-tertiary"  >
-    <!-- Navbar -->
-    
-      <div class="container-fluid">
-        <a class="navbar-brand p-1 " href="/"><img style="height:40px !important ;border-radius:20px; width:60px;"  class="img-fluid" src="wagazi_logo.jpeg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header_content').innerHTML = data;
+      })
+      .catch(error => console.log('Error loading the file:', error));
+  </script>
+
+
   
-        
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">WagDev</h5>
-  
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body d-flex align-items-center justify-content-end">
-            
-            <ul style="float: right !important;" class="navbar-nav d-flex justify-content-end align-items-center  w-100" >
-              <li class="nav-item">
-                <a class="nav-link active fs-5 fw-bold links "  aria-current="page" href="" >الرئيسية</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="#about" >نبدة عنا </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="#services" > خدماتنا</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active  fs-5 fw-bold links" aria-current="page" href="#demmander" > اطلب الان</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active fs-5 fw-bold links" aria-current="page" href="#contact" >تساؤل</a>
-              </li>
-  
-              <li class="nav-item">
-            
-            <a href="" type="button" class="nav-link active  fs-5 fw-bold links " data-bs-toggle="modal" data-bs-target="#exampleModal">
-            تواصل معنا
-          </a>
-          </li>
-        
-            </ul>
-  
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-  
- <div style="direction:rtl;color: black;" class="my-5 fs-6 alert alert-success alert-dismissible fade show" role="alert">
-      <strong class="text-danger"></strong>   مرحبا بك في صفحة <strong>WagDev</strong> للخدمات الرقمية
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-     </div>
-  <section class="container my-1">
-   
-    
-  </section>
+
+
+ 
+
+     <div id="welcom_section" class="m-5 p-4"></div>
+
+  <script>
+    fetch('welcom_section.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('welcom_section').innerHTML = data;
+      })
+      .catch(error => console.log('Error loading the file:', error));
+  </script>
+
+
+<div id="projects_section"></div>
+
+
+<script>
+  fetch('projects.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('projects_section').innerHTML = data;
+          initializeProjectFilters(); // Call the function to set up filters
+      })
+      .catch(error => console.log('Error loading the file:', error));
+
+  function initializeProjectFilters() {
+      const categoryList = document.getElementById('category-list');
+      const projects = document.querySelectorAll('#project-list .col-md-3');
+
+      categoryList.addEventListener('click', (e) => {
+          if (e.target.tagName === 'BUTTON') {
+              const selectedCategory = e.target.getAttribute('data-category');
+
+              // Remove active class from all buttons
+              const buttons = categoryList.querySelectorAll('button');
+              buttons.forEach(button => button.classList.remove('active'));
+
+              // Add active class to the selected button
+              e.target.classList.add('active');
+
+              projects.forEach(project => {
+                  const categories = project.getAttribute('data-category').split(',');
+
+                  if (selectedCategory === 'all') {
+                      project.style.display = 'block'; // Show all projects
+                  } else if (categories.includes(selectedCategory)) {
+                      project.style.display = 'block'; // Show matching projects
+                  } else {
+                      project.style.display = 'none'; // Hide non-matching projects
+                  }
+              });
+          }
+      });
+  }
+</script>
+
+<div id="skills_section"></div>
+
+  <script>
+    fetch('skills.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('skills_section').innerHTML = data;
+      })
+      .catch(error => console.log('Error loading the file:', error));
+  </script>
+
+
+<div id="cources_section"></div>
+
+  <script>
+    fetch('cources.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('cources_section').innerHTML = data;
+      })
+      .catch(error => console.log('Error loading the file:', error));
+  </script>
+
+<div id="experiences_section"></div>
+
+<script>
+  fetch('experiences.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('experiences_section').innerHTML = data;
+    })
+    .catch(error => console.log('Error loading the file:', error));
+</script>
+
+
    <!-- nav bar session-->
   <div class="container-fluid m-0">
 
 
+<section >
+  <div class="container">
+   <div class="row">
 
-   
-<!--main body-->
-
-<div class="container-fluid my-1 ">
-
-  <script>
-    function countNumbers() {
-      let count = 0;
-      const countDisplay = document.getElementById("count-display");
-
-      const intervalId = setInterval(() => {
-        count+=1234;
-        countDisplay.innerText = count.toLocaleString();
-
-        if (count >= 1597701) {
-          clearInterval(intervalId);
-          count = 0;
-          countDisplay.innerText="1,597,701"
-          
-        }
-      }, 1);
-    }
-  </script>
-   <h1 class="text-center text-info fs-1 fw-bold">
-    انضم إلى <strong id="count-display"></strong> مالكٍ للمواقع الإلكترونية
-  </h1>
-
-
-<!-- start of corsurel -->
-
-<!--<div id="carouselExampleInterval"  class="carousel slide w-100" data-bs-ride="carousel">
- <div class="carousel-inner " style=" max-height:660px">
- 
-   <div class="carousel-item active " data-bs-interval="500">
-     <img src="a.jpg" style="max-height: 530px;"  class="d-block w-100 img-fluid  image" alt="image1">
-     <div class="carousel-caption d-none d-md-block">
-       <h5 class="text-danger fw-bold fs-1">Wagazi Dev </h5>
-       <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">تصميم وتطوير المواقع الإلكترونية</p>
-     </div>
-
-   </div>
-   <div class="carousel-item" data-bs-interval="500">
-    <img src="image11.jpeg"  style="max-width:100%; max-height:530px"  class="d-block w-100 img-fluid  image" alt="image2">
-    <div class="carousel-caption d-none d-md-block">
-    <h5 class="text-danger fs-1 fw-bold fs-4">Wagazi Dev </h5>
-      <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">تطبيقات الجوال بطريقة مبتكرة</p>
-    </div>
-
-  </div>
-
-  <div class="carousel-item" data-bs-interval="500">
-    <img src="image1.jpg"  style="max-width:100%; max-height:530px"  class="d-block w-100 img-fluid  image" alt="image2">
-    <div class="carousel-caption d-none d-md-block">
-    <h5 class="text-danger fs-1 fw-bold ">Wagazi Dev </h5>
-      <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);">  خدمات الترجمة و خدمات الويب</p>
-    </div>
-
-  </div>
-   <div class="carousel-item"  data-bs-interval="1000">
-     <img src="image6.jpg"  style="max-width:100%; max-height:530px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
-     <div class="carousel-caption d-none d-md-block">
-     <h5 class="text-danger fs-1 fw-bold ">Wagazi Dev </h5>
-       <p  class="text-warning fw-bold fs-2" style="text-shadow: 1px 2px 1px rgb(12, 210, 246);"> نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت    </p>
-     </div>
-
-   </div>
- </div>
- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-   <span class="visually-hidden">Previous</span>
- </button>
- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-   <span class="visually-hidden">Next</span>
- </button>
-</div>
-
-
-<div class="container text-center">
-<a href="#menu"><i class="bi bi-caret-down-fill  fs-1 fw-bold  text-center text-secondary w-100"></i></a>
-
-</div>
--->
-<img src="csnmaroc.png"  style="max-width:100%; max-height:530px"  class="d-block w-100 img-fluid  image" alt="image2">
-   
-
-
-    <ul style="margin: 20px;">
-      <li class="w-100">
-        
-           <h1   class="text-muted w-100 fs-4 fw-bold">نحن نقدم حلولًا متميزة لإبداع وتطوير المواقع الإلكترونية. فريقنا من المطورين المحترفين ملتزم بتقديم أعلى جودة لعملائنا.</h1>
   
-      </li>
-      <li class="w-100">
-         <h1 class="text-muted w-100 fs-4 fw-bold">مهمتنا هي تحقيق رؤية عملائنا وتحويلها إلى واقع ملموس من خلال تصميم وبرمجة مواقع وتطبيقات ويب فريدة وذات تجربة مستخدم استثنائية.</h1>
-  
-      </li>
-    </ul>
-<!-- end of cersurel-->
-</div>
-
-<div class="container-fluid my-4"  id="about">
-   <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">نبدة عنا  </h1>
-   
-<div class="row my-4 d-flex align-items-center">
-    
- 
-    <div class="col-md-6 text-center ">
-<img style="border-radius: 30px;box-shadow:1px 2px 1px black" class="img-fluid"src="wagdev.jpg" alt="">
-    </div>
-     <div class="col-md-6 ">
-        <p  style="font-family: serif !important;text-shadow:2px 1px 2px white ;" class="fs-4 fw-bold text-muted text-center"> نحن متخصصون في تصميم وتطوير المواقع الإلكترونية وتطبيقات الجوال بطريقة مبتكرة وفريدة تلبي احتياجات عملائنا وتساعدهم على تحقيق أهدافهم الرقمية. نحن نعمل بفريق من المطورين والمصممين المحترفين لتوفير حلول مبتكرة تتماشى مع رؤية العملاء وتفوق توقعاتهم. بالإضافة إلى تصميم وتطوير المواقع والتطبيقات، نقدم خدمات أخرى تساعد الأعمال على النجاح عبر الإنترنت مثل التسويق الرقمي، تحسين محركات البحث، وحلول التجارة الإلكترونية. نحن نلتزم بتقديم خدمة استثنائية ونتائج متميزة لكل عميل نتعامل معه في واجازي ديف. ونفخر بخدمة مجتمع تاليوين والمنطقة المحيطة بها</p>
-     </div>
-
-
-</div>
-
-
-</div>
-
-<!--- fin posts-->
-
-<section class="services-section" id="services">
-    <div class="container">
-      <h2  style="text-shadow:1px solid red" class="section-title m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">خدماتنا</h2>
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-box">
-            <i class="fa fa-desktop"></i>
-            <h3>تطوير المواقع الإلكترونية</h3>
-            <p>نصمم ونطور مواقع إلكترونية جميلة ومتجاوبة تعمل بسلاسة على جميع الأجهزة.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-box">
-            <i class="fa fa-mobile"></i>
-            <h3>تطوير تطبيقات الجوال</h3>
-            <p>نقوم بإنشاء تطبيقات جوال مبتكرة لنظامي iOS و Android والتي تتماشى مع احتياجاتك الخاصة.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="service-box">
-            <i class="fa fa-globe"></i>
-            <h3>التسويق الرقمي</h3>
-            <p>نساعد الأعمال على تحسين وجودها على الإنترنت من خلال استراتيجيات التسويق الرقمي الفعالة.</p>
-          </div>
-        </div>
-
-
-   
-        <!-- Our Projects -->
-<section class="container my-4">
-  <h2  style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">مشاريعنا</h2>
-  <div class="row">
-    <div class="col-12 col-md-3">
-      <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
-        <img src="commune.png"   style="height: 200px; border-top-left-radius: 40px;border-top-right-radius: 40px;"   class="card-img-top" alt="مشروع 1">
-        <div class="card-body">
-          <h5 class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">  تطبيق لبلدية تالوين </h5>
-          <p class="card-text">تطبيق للجماعة الترابية لتالوين ،يقدم الخدمات لسكان المدينة عبر الانترنيت </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
-        <img src="csnmaroc.png"  style="height: 200px; border-top-left-radius: 40px;border-top-right-radius: 40px;"  class="card-img-top" alt="مشروع 2">
-        <div class="card-body">
-          <h5 class="card-title text-success " style="font-size: 22px ;font-weight:bold;text-decoration: underline;"> المحاسبة و الخدمات</h5>
-          <p class="card-text">المحاسبة و الخدمات قما بتطوير صفحة لشركة امحاسبة والخدمات ف تلوين تقوم بعرض خدماتها</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
-        <img src="scholarshipapplication.png"  style="height: 200px; border-top-left-radius: 40px;border-top-right-radius: 40px;"  class="card-img-top" alt="مشروع 2">
-        <div class="card-body">
-          <h5 class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">طلب منح دراسية</h5>
-          <p class="card-text">تطبيق يقدم كل ماهو جديد من المنح الدراسية حول العالم</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3" >
-      <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
-        <img src="fashionStore.png"  style="height: 200px; border-top-left-radius: 40px;border-top-right-radius: 40px;"  class="card-img-top" alt="مشروع 2">
-        <div class="card-body">
-          <h5 class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">مشروع باستعمال الذكاء الاصطناعي</h5>
-          <p class="card-text">هدا المشروع عبارة عن تطبيق للبحت عن الألبسة باستعمال الذكاء اااصطناعي</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<div class="container p-4" id="demmander">
-<h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">خدماتنا </h1>
       
-     <!-- Section 2: Web Design -->
-<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
-  <div class="col-7 text-center text-danger">
-    <h1>تصميم مواقع الويب</h1>
-    <p class="text-success text-center fs-4 fw-bold text-dark">
-      يقدم مكتبنا خدمات تصميم مواقع الويب المبتكرة والمتجاوبة. نحن نهتم بتقديم تجربة مستخدم فريدة وجذابة للمستخدمين، بما في ذلك تصميم الواجهة الجذابة وتنفيذ التطوير الخاص بالموقع. اطلب تصميم موقعك معنا اليوم وسنعمل معك على تحقيق رؤيتك الرقمية.
-    </p>
-    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-  </div>
-  <div class="col-5">
-    <img style="height: 250px !important;border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image1.jpg" alt="image2" class="img-fluid h-100 w-100">
-  </div>
+
+
+
+
+
+   
+ </div> 
 </div>
-<!-- Section 3: Help Societies -->
-<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
-  <div class="col-7 text-center text-danger">
-    <h1>تطوير تطبيقات الويب </h1>
-    <p class="text-success text-center fs-4 fw-bold text-dark">
-      نحوّل أفكارك إلى تطبيقات ويب قوية وذكية توفر تجربة مستخدم مثالية وتحقق أهداف عملك.
-    </p>
-    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-  </div>
-  <div class="col-5">
-    <img style="height: 250px !important;border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image4.jpg" alt="image4" class="img-fluid h-100 w-100">
-  </div>
 </div>
-
-
-
-<!-- Section 6: Video Editing -->
-<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
-  <div class="col-7 text-center text-danger">
-    <h1>تحرير الفيديو</h1>
-    <p class="text-success text-center  fs-4 fw-bold text-dark">
-      نحن نقدم خدمات تحرير الفيديو الاحترافية. سواء كنت بحاجة إلى تحرير فيديوهات ترويجية، مقاطع فيديو قصيرة، فيديوهات حفلات أو أي نوع آخر من تحرير الفيديو، فإن فريقنا المتخصص يمتلك المهارات والأدوات اللازمة لإنشاء محتوى فيديو مميز وجذاب. احصل على فيديوهات احترافية تلبي احتياجاتك وتساعدك على نشر رسالتك بفعالية.
-    </p>
-    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-  </div>
-  <div class="col-5">
-    <img style="height: 250px !important;border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="videoediting.webp" alt="image6" class="img-fluid h-100 w-100">
-  </div>
-</div>
-
-
-<!-- Section 5: Web and Mobile Development -->
-<div style="direction:rtl ;border-radius:40px !important;box-shadow:inset 2px 1px 10px 2px black;" class="row p-3 my-3 border align-items-center rounded shadow">
-  <div class="col-7 text-center text-danger">
-    <h1>تطوير التطبيقات المحمولة </h1>
-    <p class="text-success text-center  fs-4 fw-bold text-dark">
-      نحن نوفر خدمات تطوير الويب وتطبيقات الجوال الاحترافية. سواء كنت تحتاج إلى بناء موقع ويب مخصص أو تطبيق محمول لأجهزة Android و iOS، فإننا نمتلك الخبرة والمهارات اللازمة لتلبية احتياجاتك. فريق المطورين لدينا يعمل بجد لتقديم منتج نهائي مبتكر وفعال يلبي متطلباتك الفردية ويوفر تجربة مستخدم ممتازة.
-    </p>
-    <a href="#" class="btn fs-1 btn-outline-success"><i class="bi bi-translate"></i> اطلب الآن</a>
-  </div>
-  <div class="col-5">
-    <img style="height: 250px !important; border-radius:40px !important;box-shadow:2px 1px 10px 2px black;" src="image2.jpg" alt="image5" class="img-fluid w-100">
-  </div>
-</div>
-  
-    </div>
-   </div> 
-  </div>
-  </div>
 </section>
+
   
 
 
@@ -477,17 +239,7 @@
 
 <!-- Contacter -->
 
-<div class="container d-flex w-100 align-items-center justify-content-center">
 
-   
-     
-      
-    
-  
-   
-    
-
-   </div>
 
 
 
@@ -495,202 +247,27 @@
 
 <!-- fin avis de clients-->
 <!-- Products/Services -->
-<section class="container mt-4">
- <div class="row">
+
+<div class="container-fluid my-4"  id="about">
+  <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold">About </h1>
   
-    <div class="col-md-4 ser">
-      <img src="image12.jpeg"  style="max-height: 250px;"  class="w-100" alt="المنتج 1">
-      <h4  class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">تطوير المواقع الإلكترونية</h4>
-      <p class="text-muted">نقدم خدمات تصميم وبرمجة مواقع ويب مبتكرة ومتجاوبة تلبي احتياجات عملك وتعزز وجودك الرقمي.</p>
-    </div>
-    <div class="col-md-4 ser">
-      <img src="image14.jpeg" style="max-height: 250px;" class="w-100" alt="المنتج 2">
-      <h4  class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">تطوير تطبيقات الويب</h4>
-      <p class="text-muted">نحوّل أفكارك إلى تطبيقات ويب قوية وذكية توفر تجربة مستخدم مثالية وتحقق أهداف عملك.</p>
-    </div>
-    <div class="col-md-4 ser">
-      <img src="image13.jpeg"  style="max-height: 250px;"  class="w-100" alt="المنتج 3">
-      <h4 class="card-title text-success "  style="font-size: 22px ;font-weight:bold;text-decoration: underline;">استشارات تقنية</h4>
-      <p class="text-muted">نقدم خدمات استشارية متخصصة في مجال تطوير الويب، مساعدتك في اتخاذ القرارات الصائبة لتحقيق أهدافك التقنية.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-     <div class=" container mt-5" >
-      <div class="row d-flex align-items-centern justify-content-center"  >
-        <h2 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline fs-1 fw-bold">معلومات عنا</h2>
-         
-<div class="col-12 col-md-6  d-flex flex-column align-items-center justify-content-center">
-                <h1 class="text-center fs-1 fw-bold text-secondary">الموقع : حي  تابيا تالوين </h1>
-                <section class="w-100">
-              <div class="row d-flex align-items-center justify-content-center">
-                <div class="col-md-6">
-              </div>
-                <div class="">
-                  <iframe style="width: 100%; height: 400px; border-radius: 30px;box-shadow: 10px 5px 10px black;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117725.20719138842!2d-8.897247780587425!3d30.73250107605232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaa45207c32bc85%3A0x479b2846c736a6f7!2sTaliouine!5e0!3m2!1sen!2sma!4v1676112305036!5m2!1sen!2sma" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                   
-                </div>
-              </div>
-                  <!-- تعديل الموقع المضمن حسب الكود الذي حصلت عليه من موقع جوجل ماب -->
-                       
-                      
-                 
-            </section>
-              
-          </div>
-        <section class="col-12 col-md-6 container mt-4">
-         <div class="row d-flex align-items-center justify-content-center">
-            
-        
-        
-            <div class="fs-2 text-center col-mg-8">
-           
-        
-         
-       
-          <div class="text-center text-primary fs-3">
-            <h4 class="fs-1 text-secondary text-decoration-underline my-3">تواصل معناعلي مواقع التواصل الإجتماعي</h4>
-      
-            <div class="text-center  btn-group d-flex  m-2">
-              
-                
-              <button class="btn" style="font-size: 27px;width: 200px;"> <a  href="https://web.facebook.com/profile.php?id=100044175622133"  class="btn btn-primary" style="width: 100px;" title="our facebook group"> <i class="bi bi-facebook"></i></a></button>
-             
-              <button class="btn" style="font-size: 27px;width: 200px;"><a  href="mailto:wagdev072@gmail.com"  class="btn btn-warning" style="width: 100px;"title="Contact us at email"><i class="bi bi-envelope"></i></a></button>
-             <button class="btn" style="font-size: 27px;width: 200px;"> <a  href="https://api.whatsapp.com/send?phone=+212671344804&text=سلام"  class="btn btn-success" style="width: 100px;" title="contact us at whatssap"><i class="bi bi-whatsapp "></i></a></button>
-      
-          
-            </div>
-            </div>
-
-        
-          <h1 class="fs-1 text-primary text-center">
-            <button class="btn" style="font-size: 27px;width: 200px;"><a href="https://www.linkedin.com/in/sabriabdelaaziz/" class="btn btn-light" style="width: 100px;"><i class=" text-danger fs-2 btn btn-light bi bi-linkedin"></i></a></button>
-            <button class="btn" style="font-size: 27px; width: 200px;"><a href="https://github.com/sabri-abdelaaziz" class="btn btn-dark" style="width: 100px;"><i class="btn btn-dark bi bi-github"></i></a></button>
-          </h1>
-           
-         
-          <div class="d-flex align-items-center justify-content-center my-3">
-            <h6 class="fs-4 text-success">الهاتف: <strong class="text-dark">0671344804</strong></h6>
-            <a style="border-radius: 50%;" href="tel:+212671344804" class="btn btn-success border mx-2" title="Contactez-nous par téléphone">
-              <i class="bi bi-telephone-fill"></i> اتصل هنا
-          </a>
-          </div>
+<div class="row my-4 d-flex align-items-center">
    
-          <h6 class="fs-4 text-success">البريد الإلكتروني: <strong class="text-dark">wagdev072@gmail.com</strong></h6>
-        
-        </div>
-        
-          </div>
-        </section>
 
-        
-        
-          
-      </div>
-     
+   <div class="col-md-6 text-center ">
+<img style="border-radius: 30px;box-shadow:1px 2px 1px black;height: 460px;" class="img-fluid"src="nki.jpg" alt="">
+   </div>
+    <div class="col-md-6 ">
+       <p  style="font-family: serif !important;text-shadow:2px 1px 2px white ;" class="fs-4 fw-bold text-muted text-center">
+        As a data scientist, I specialize in transforming complex data into actionable insights that drive strategic decision-making. With expertise in machine learning, statistical analysis, and data visualization, I harness the power of data to solve challenging problems across diverse industries. My passion for data science stems from my ability to uncover patterns, predict trends, and provide innovative solutions that add real value to businesses. This portfolio showcases my projects, methodologies, and the tools I use to extract meaningful information from raw data, demonstrating my skills in data-driven problem solving and analytical thinking.
+   
     </div>
 
-  <div class="row d-flex align-items-center justify-content-center">
-    <div class="col-12 col-md-6">
-      <h1 style="text-shadow:1px solid red" class="m-5 text-center text-info text-decoration-underline  fs-1 fw-bold"> تساؤل  </h1>
-   
-    
-                <form action="mailto:wagdev072@gmail.com" method="post" enctype="text/plain"  id="contact"  class="form shadow bg-light w-100 p-4 mb-5 bordered bounded  form-secondary "  >
-    
-                  <div class="form-group " >
-    
-    
-    
-                <div class="text-center">
-                  <div class="d-flex flex-column m-3 p-5s">
-                  <label for="image">
-    
-    
-                    <img width="150px"id="imagePreview2" height="120px" style="border-radius: 50%;" src="wagazi_logo.jpeg" alt="">
-    
-    
-                  </label>
-           
-                <h6 class="text-center">تواصل معنا</h6>
-                
-                </div>
-                </div>
-                  </div>
-            
-                  <div class="form-group">
-                    <label for="first_name" class="form-label text-muted fs-4  fw-bold">الإسم: <strong class="text-danger">*</strong></label>
-                    <input type="text" class="form-control" id="first_name" placeholder="ادخل الاسم"  name="subject">
-                  </div>
-  
-                  <div class="form-group" >
-                    <label for="email" class="form-label text-muted  fs-4  fw-bold">لبريد الالكتروني: <strong class="text-danger">*</strong></label>
-                    <input type="email" class="form-control" id="email" placeholder="اكتب البريد الالكتروني" name="email">
-                  </div>
-                       
-   
-               
-       
-                  <div class="form-group">
-                    <label for="telephone" class=" form-label text-muted fs-4  fw-bold">الرسالة <strong class="text-danger">*</strong></label>
-                <textarea name="message" id="" cols="30" rows="10" placeholder="اكتب الرسالة .." class="form-control"></textarea>
-                  </div>
-    
-      
-    
-                  <button type="submit" class="btn btn-primary w-100 my-2 fs-4" class="text-light fs-3  fw-bold" name="submit">Envoyer</button>
-                </form>
-    </div>
-  </div>
-  
 
-<section class="container mt-4 fs-5" >
-  <ul>
-    <li>
-      فريق من المطورين والمصممين المبدعين يتخصصون في تطوير وتصميم المواقع الإلكترونية عالية الجودة. 
-    </li>
-   
-    <li>
-      نحن نهتم بتقديم حلول مخصصة لعملائنا ونسعى جاهدين لتحقيق رؤية عملائنا وتلبية احتياجاتهم بشكل فعّال. 
-    </li>
-    <li>
-      مع خبرتنا الواسعة في مجال تطوير الويب والتكنولوجيا الحديثة، نحن نضمن تقديم منتج نهائي مميز ومبتكر يساعدك في تحقيق نجاحك الرقمي.
-    </li>
-
-  </ul>
-  <br>
-<br>
-
-</section>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-      
-           
-            
+</div>
 
       
 
@@ -698,7 +275,7 @@
 <!-- footer-->
 <div class="container-fluid my-4">
 <footer style="background: #799279 !important;border-top:2px solid black !important;margin-bottom: 0;" id="footer" class="footer w-100 my-4  p-4">
-    <div style="direction: rtl;" class="row d-flex align-items-center justify-content-around ">
+    <div  class="row d-flex align-items-center justify-content-around ">
        
   
    
@@ -758,7 +335,7 @@
 
 
       <div class="col-12 text-center col-md-4">
-        <h1 class="text-center text-dark lead fs-2 w-100 p-3">   تواصل معنا </h1>
+        <h1 class="text-center text-dark lead fs-2 w-100 p-3">Contact Us</h1>
  <div class="text-center  btn-group p-2  my-2">
 
       
@@ -777,10 +354,10 @@
     <ul class="text-center   p-2  my-2">
       
         
-        <h1>العنوان </h1>
+        <h1>Address </h1>
         <address>
-         Tabya Taliouine Taroudant<br>
-         <a href="tell:0671344804"> الهاتف:0671344804 </a>
+         Agadir Morocco<br>
+         <a href="tell:0671344804"> Tell : +212671344804</a>
          <br>
           
         </address>
@@ -794,7 +371,7 @@
     </div>
  
     <div class="text-center">
-  <p class="text-center text-dark my-5">  WagDev-2024&copy;
+  <p class="text-center text-dark my-5"> &copy; Sabri-Abdelaaziz-2024
 
   
     </div>
@@ -853,8 +430,6 @@
 <!-- end js bootstrap-->
 
 
-
-
   
   <!-- contact Modal -->
   <div class="modal fade my-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -901,10 +476,10 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header d-flex justify-content-between">
-          <h1 style="direction:rtl;" class="modal-title   fs-5" id="exampleModalLabel"> </h1>
+          <h1  class="modal-title   fs-5" id="exampleModalLabel"> </h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div  style="direction:rtl;"  class="modal-body fs-3">مرحبا، 
+        <div    class="modal-body fs-3">مرحبا، 
         نعتذر لزبنائنا الكرام هذه الخدمة غير متوفرة الان في مكتبنا عما قريب انشاء الله سوف نقوم بفتحها
         </div>
         <div class="modal-footer">
