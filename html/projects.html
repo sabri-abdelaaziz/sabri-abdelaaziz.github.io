@@ -1,0 +1,372 @@
+<style>
+    .project-card {
+  display: block; /* Initially display all cards */
+  opacity: 1; /* Fully opaque */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.project-card.hidden {
+  opacity: 0; /* Fully transparent when hidden */
+  transform: translateY(20px); /* Move down slightly when hidden */
+  pointer-events: none; /* Prevent pointer events on hidden elements */
+}
+
+.project-card.visible {
+  opacity: 1; /* Fully opaque when visible */
+  transform: translateY(0); /* Reset transform to original position */
+}
+
+    .category-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.category-button {
+  background-color: #007bff; /* Primary color for buttons */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for buttons */
+  margin: 5px; /* Space between buttons */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+.category-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.category-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px #0056b3; /* Custom focus effect */
+}
+
+    .services-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    cursor: pointer;
+  }
+  
+  .services-section .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .services-section .service-box {
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .services-section .service-box:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }
+  
+  .services-section .service-box i {
+    font-size: 48px;
+    color: #5f5f5f;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .services-section .service-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .services-section .service-box p {
+    font-size: 16px;
+    color: #7f7f7f;
+    line-height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+    button {
+      cursor: pointer;
+      padding: 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      margin: 5px; /* Added margin for better spacing */
+    }
+    button:hover {
+      background-color:white !important;
+      color: #007bff;
+      border: 1px solid black;
+      text-decoration: underline;
+    }
+    .project-card {
+      display: block; /* Initially display all cards */
+    }
+    .langs > img{
+     width: 30px !important;
+     height: 30px !important;
+     margin: -3px;
+    }
+  </style>
+  
+  <!-- Our Projects -->
+  <section class="container my-4" id="projects">
+    <h2 style="text-shadow:1px solid red;color:#436850" class="m-5 text-center  text-decoration-underline fs-1 fw-bold">Projects</h2>
+    
+    <div id="category-list" class="category-list">
+        <button class="category-button" data-category="all">All Projects</button>
+        <button class="category-button" data-category="ai">AI Projects</button>
+        <button class="category-button" data-category="android">Android Projects</button>
+        <button class="category-button" data-category="django">Django Projects</button>
+        <button class="category-button" data-category="others">Others</button>
+      </div>
+      
+    
+    <div id="project-list" class="row">
+        <!-- Android Stock Management App -->
+        <div class="col-12 col-md-3" data-category="android">
+          <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+            <img src="images/stockManagement.jpeg" class="card-img-top" alt="Scholarship Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            <div class="card-body">
+              <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+                Stock Management APP
+              </h5>
+              <div class="div langs d-flex align-items-center ">
+                <img src="images/projets/kotlin.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/android.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/room.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/mvvm.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              </div>
+              <p class="card-text">
+                An Android app that provide the process of store management that allows the stores owners to manage their business by simple android app.
+              </p>
+              <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+                <p class="card-date" style="font-size: 14px; color: gray;">
+                  Date Created: <span>08/2024</span>
+                </p>
+                <a href="https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                  <img src="images/github_icon.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Others Project -->
+       <div class="col-12 col-md-3 project-card" data-category="ai,android">
+        <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+          <img src="images/gmini.jpeg" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+              Gemini pro - Generative AI 
+            </h5>
+            <div class="div langs d-flex align-items-center ">
+              <img src="images/projets/kotlin.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/gemini.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/android.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/room.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/mvvm.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            </div>
+            <p class="card-text">
+            Implementation of the Google Gemini Pro API in android phone,this allow user to ask anything and get more inituitive responses from the Google Gemini model.
+            </p>
+            
+            <!-- Date of Creation -->
+            <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+              <p class="card-date" style="font-size: 14px; color: gray;">
+                Date Created: <span>01-2024</span>
+              </p>
+              
+              <!-- GitHub Icon -->
+              <a href="https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                <img src="images/github_icon.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+              </a>
+              
+              <!-- LinkedIn Icon -->
+              <a href="https://www.linkedin.com/posts/sabriabdelaaziz_geminiabrproabrversion-ai-generativeabrai-activity-7164675094391279616-TY4a?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="LinkedIn Profile" class="github-icon">
+                <img src="images/linkedin.jpg" alt="LinkedIn" style="width: 34px; height: 34px;" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- django Project -->
+      <div class="col-12 col-md-3" data-category="django">
+        <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+          <img src="images/commune.png" class="card-img-top" alt="Municipality Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
+          <div class="card-body">
+            <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+              Taliouine Municipality Application
+            </h5>
+            <div class="div langs d-flex align-items-center ">
+              <img src="images/projets/python.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/django.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/html.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/css.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/bootstrap.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/xampp.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            </div>
+            <p class="card-text">
+              An application for the local community of Taliouine that provides services to residents online.
+            </p>
+            <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+              <p class="card-date" style="font-size: 14px; color: gray;">
+                Date Created: <span>06-2023</span>
+              </p>
+              <a href="https://github.com/sabri-abdelaaziz/communeTaliouine" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                <img src="images/github_icon.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- AI Project -->
+        <div class="col-12 col-md-3" data-category="ai">
+          <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+            <img src="images/fashionStore.png" class="card-img-top" alt="AI Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            <div class="card-body">
+              <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+                AI-Based Project
+              </h5>
+              <div class="div langs d-flex align-items-center ">
+                <img src="images/projets/python.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/flask.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/html.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/css.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/bootstrap.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+                <img src="images/projets/xampp.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              </div>
+             
+              <p class="card-text">
+                This project involves developing an application to search for clothing using artificial intelligence.
+              </p>
+              <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+                <p class="card-date" style="font-size: 14px; color: gray;">
+                  Date Created: <span>04-2023</span>
+                </p>
+                <a href="https://gitlab.com/i2722/pfe_project" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                  <img src="images/gitlab.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  
+      <!-- Others Project -->
+      <div class="col-12 col-md-3 project-card" data-category="others">
+        <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+          <img src="images/csnmaroc.png" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+              Accounting and Services
+            </h5>
+            <div class="div langs d-flex align-items-center ">
+              <img src="images/projets/php.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+             <img src="images/projets/html.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/css.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/bootstrap.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/xampp.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            </div>
+            <p class="card-text">
+              Developing a Website for an accounting and services company in Taliouine to showcase their services.
+            </p>
+            
+            <!-- Date of Creation -->
+            <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+              <p class="card-date" style="font-size: 14px; color: gray;">
+                Date Created: <span>07-2022</span>
+              </p>
+              
+              <!-- GitHub Icon -->
+              <a href="https://gitlab.com/Abdelaazizsabri/csnmaroc-site" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                <img src="images/gitlab.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+              </a>
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+  
+    
+  
+      <!-- Django Project -->
+      <div class="col-12 col-md-3" data-category="others">
+        <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
+          <img src="images/scholarshipapplication.png" class="card-img-top" alt="Scholarship Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
+          <div class="card-body">
+            <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
+              Scholarship Application
+            </h5>
+            <div class="div langs d-flex align-items-center ">
+             <img src="images/projets/php.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/html.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/css.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/bootstrap.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+              <img src="images/projets/xampp.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
+            </div>
+            <p class="card-text">
+              An application that provides the latest information on scholarships worldwide.
+            </p>
+            <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+              <p class="card-date" style="font-size: 14px; color: gray;">
+                Date Created: <span>08-2022</span>
+              </p>
+              <a href="https://gitlab.com/i2722/scolarshipapplication" target="_blank" aria-label="GitHub Repository" class="github-icon">
+                <img src="images/gitlab.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
+              </a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const categoryList = document.getElementById('category-list');
+        const projects = document.querySelectorAll('#project-list .project-card');
+
+        categoryList.addEventListener('click', (e) => {
+            console.log('Button clicked:', e.target);
+            if (e.target.tagName === 'BUTTON') {
+                const selectedCategory = e.target.getAttribute('data-category');
+                console.log('Selected category:', selectedCategory);
+                if (selectedCategory === 'all') {
+                    projects.forEach(project => {
+                        project.style.display = 'block';
+                    });
+                } else {
+                    projects.forEach(project => {
+                        if (project.getAttribute('data-category') === selectedCategory) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                }
+            }
+        });
+    });
+    </script>
+
+  

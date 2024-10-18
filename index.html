@@ -8,6 +8,10 @@
   *{
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
+    
+  }
+  p{
+    color: black !important;
   }
       form{    
         border-radius:20px ;
@@ -53,8 +57,8 @@
 
 <!-- end css-->
 <!-- add fav icon to the page -->
-<link rel="icon" type="image/png" href="a.jpg">
-<link rel="shortcut icon" type="image/jpg" href="a.jpg">
+<link rel="icon" type="image/png" href="images/a.jpg">
+<link rel="shortcut icon" type="image/jpg" href="images/a.jpg">
  <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,7 +67,7 @@
 <body  onload="countNumbers()" >
   <div id="header_content"></div>
   <script>
-    fetch('header.html')
+    fetch('html/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header_content').innerHTML = data;
@@ -73,7 +77,7 @@
      <div id="welcom_section" class="m-5 p-4"></div>
 
   <script>
-    fetch('welcom_section.html')
+    fetch('html/welcom_section.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('welcom_section').innerHTML = data;
@@ -86,7 +90,7 @@
 
 
 <script>
-  fetch('projects.html')
+  fetch('html/projects.html')
       .then(response => response.text())
       .then(data => {
           document.getElementById('projects_section').innerHTML = data;
@@ -128,7 +132,7 @@
 <div id="skills_section"></div>
 
   <script>
-    fetch('skills.html')
+    fetch('html/skills.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('skills_section').innerHTML = data;
@@ -140,7 +144,7 @@
 <div id="cources_section"></div>
 
   <script>
-    fetch('cources.html')
+    fetch('html/cources.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('cources_section').innerHTML = data;
@@ -151,7 +155,7 @@
 <div id="experiences_section"></div>
 
 <script>
-  fetch('experiences.html')
+  fetch('html/experiences.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('experiences_section').innerHTML = data;
@@ -193,10 +197,10 @@
    
 
    <div class="col-md-6 text-center ">
-<img style="border-radius: 30px;box-shadow:1px 2px 1px black;height: 460px;" class="img-fluid"src="nki.jpg" alt="">
+<img style="border-radius: 30px;box-shadow:1px 1px 7px black;height: 460px;" class="img-fluid"src="images/nki.jpg" alt="">
    </div>
     <div class="col-md-6 ">
-       <p  style="font-family: serif !important;text-shadow:2px 1px 2px white ;" class="fs-4 fw-bold text-muted text-center">
+       <p  style="font-family: serif !important;text-shadow:2px 1px 2px white ;" class="fs-4 fw-bold  text-center">
         As a data scientist, I specialize in transforming complex data into actionable insights that drive strategic decision-making. With expertise in machine learning, statistical analysis, and data visualization, I harness the power of data to solve challenging problems across diverse industries. My passion for data science stems from my ability to uncover patterns, predict trends, and provide innovative solutions that add real value to businesses. This portfolio showcases my projects, methodologies, and the tools I use to extract meaningful information from raw data, demonstrating my skills in data-driven problem solving and analytical thinking.
    
     </div>
@@ -225,26 +229,39 @@
               <div class="carousel-inner " style=" max-height:460px">
               
                 <div class="carousel-item active " data-bs-interval="500">
-                  <img src="csnmaroc.png" style="height: 200px;"  class="d-block w-100 img-fluid  image" alt="image1">
+                  <img src="images/csnmaroc.png" style="height: 200px;"  class="d-block w-100 img-fluid  image" alt="image1">
                   <div class="carousel-caption d-none d-md-block">
             </div>
              
                 </div>
                 <div class="carousel-item" data-bs-interval="500">
-                  <img src="commune.png"  style="max-width:100%; height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
+                  <img src="images/commune.png"  style="max-width:100%; height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
                   <div class="carousel-caption d-none d-md-block">
                 
                   </div>
              
                 </div>
+                <div class="carousel-item"  data-bs-interval="1000">
+                  <img src="images/gmini.jpeg"  style="max-width:100%; height:200px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
+                  <div class="carousel-caption d-none d-md-block">
+           </div>
+             
+                </div>
                 <div class="carousel-item" data-bs-interval="500">
-                  <img src="fashionStore.png"  style="max-width:100%; height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
+                  <img src="images/fashionStore.png"  style="max-width:100%; height:200px"  class="d-block w-100 img-fluid  image" alt="image2">
                   <div class="carousel-caption d-none d-md-block">
                </div>
              
                 </div>
                 <div class="carousel-item"  data-bs-interval="1000">
-                  <img src="scholarshipapplication.png"  style="max-width:100%; height:200px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
+                  <img src="images/scholarshipapplication.png"  style="max-width:100%; height:200px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
+                  <div class="carousel-caption d-none d-md-block">
+           </div>
+             
+                </div>
+            
+                <div class="carousel-item"  data-bs-interval="1000">
+                  <img src="images/stockManagement.jpeg"  style="max-width:100%; height:200px !important;border: 1px solid ray;"  class="d-block w-100 img-fluid image" alt="image3">
                   <div class="carousel-caption d-none d-md-block">
            </div>
              
@@ -322,7 +339,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center text-info fs-3">
-        <p>Contact Me :</p>
+        <p>Contact :</p>
   
         <div class="text-center  btn-group d-flex  m-2">
           
@@ -337,7 +354,7 @@
         </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">رجوع</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Back</button>
          
   
         </div>
@@ -346,25 +363,6 @@
   </div>
   </div> 
  
-  <!-- Model de ne pas avoir cette service dans notre services -->
-
-  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-between">
-          <h1  class="modal-title   fs-5" id="exampleModalLabel"> </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div    class="modal-body fs-3">مرحبا، 
-        نعتذر لزبنائنا الكرام هذه الخدمة غير متوفرة الان في مكتبنا عما قريب انشاء الله سوف نقوم بفتحها
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"data-bs-dismiss="modal" >اغلاق</button>
-          <button type="button" class="btn btn-primary"data-bs-dismiss="modal"> حسنا</button>
-        </div>
-      </div>
-    </div>
-   </div>
 </body>
 </html>
 
