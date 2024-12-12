@@ -1,0 +1,147 @@
+<style>
+    /* Certificates Section Styling */
+  .certificates-section {
+    background-color: #f4f7fa !important;
+    padding: 60px 20px;
+  }
+  
+  h2.certificates-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #436850;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  /* Adding a subtle underline animation */
+  h2.certificates-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: #436850;
+    bottom: 0;
+    left: 25%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  h2.certificates-title:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Card Styling */
+  .certificate-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .certificate-card h5 {
+    font-size: 1.25rem;
+    color: #436850;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .certificate-card p {
+    color: #757575;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .certificate-card .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Hover Effects */
+  .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .certificate-card {
+      padding: 20px;
+    }
+  
+    h2.certificates-title {
+      font-size: 2rem;
+    }
+  }
+  </style>
+  
+  <section class="certificates-section" id="certificates">
+    <h2 class="certificates-title text-center my-5" style="color: rgb(6, 5, 5) !important;">Certificates</h2>
+  
+    <div class="row justify-content-center">
+       <!-- Certificate 2 -->
+        <a style="cursor: pointer;text-decoration: none;"  class="col-md-3" href="https://learn.365datascience.com/certificates/CC-38FE5F934C/">
+          <div>
+            <div class="certificate-card" >
+              <img src="images/certificates/CC-38FE5F934C.jpg" alt="Certificate 2" class="card-img-top">
+              <h5>Python Programmer Bootcamp</h5>
+              <p>Completed a comprehensive course on Python programming and its application . Srating from basics to OOP then some real world applications implementation.</p>
+              <p><strong><img width="20px" src="images/certificates/365datascience.png" alt=""></strong> 365DataScience</p>
+              <p><strong>Date:</strong> 14 November 2024</p>
+              <p><strong>ID:</strong> CC-38FE5F934C</p>
+              
+            </div>
+          </div>
+        </a>
+      
+      <!-- Certificate 1 -->
+      <a class="col-md-3" style="cursor: pointer;text-decoration: none;"  class="col-md-3" href="https://learn.365datascience.com/certificates/CC-A4B684072E/">
+        
+      <div >
+        <div class="certificate-card">
+          <img src="images/certificates/CC-A4B684072E.jpg" alt="Certificate 1" class="card-img-top">
+          <h5>Introduction to Python</h5>
+          <p>Achieved a certification in Python at 365DataScience , mastering basics of python (data structure , functions , data types). I've learned and implemented python to solve complecated problems</p>
+          <p><strong><img width="20px" src="images/certificates/365datascience.png" alt=""></strong> 365DataScience</p>
+          <p><strong>Date:</strong> 02 November 2024</p>
+          <p><strong>ID:</strong> CC-A4B684072E</p>
+        </div>
+      </div>
+    </a>
+     
+  
+         <!-- Certificate 1 -->
+         <a class="col-md-3" style="cursor: pointer;text-decoration: none;"  class="col-md-3" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/7229b3176b5706f413e8aea1eb56ed9360fbe2f0">
+        
+          <div >
+            <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal" onclick="showCertificate('certificate1.pdf')">
+              <img src="images/certificates/supervised-ml-dc.png" height="200px" alt="Certificate 1" class="card-img-top">
+              <h5>Supervised learning course with Scikit-learn</h5>
+              <p>This courses has helped me to master sk-learn library in python . Scikit-learn library contain various tools to create and manipulate models weither machine learnig , deep learning .It helped to buil well-structured AI models </p>
+              <p><strong><img width="20px" src="images/certificates/datacamp.png" alt=""></strong> DataCamp</p>
+              <p><strong>Date:</strong> APR 09,2024</p>
+            </div>
+          </div>
+        </a>
+  
+       
+
+    </div>
+  </section>
+  
+  
+  
+  <script>
+    function showCertificate(pdfFile) {
+      // Set the source of the PDF file in the modal
+      document.getElementById('certificatePDF').src = 'path_to_certificates/' + pdfFile;
+    }
+  </script>
+  

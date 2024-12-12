@@ -1,70 +1,169 @@
-<section class="services-section" style="background-color: white !important;" id="skills" >
-<h2  style="text-shadow:1px solid red;color:#436850" class="section-title  text-center  text-decoration-underline  fs-1 fw-bold">skills</h2>
-   
-<div class="row">
 
+<style>
+  /* Overall Section Styling */
+.services-section {
+  background-color: #f4f7fa !important;
+  padding: 60px 20px;
+}
+
+h2.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #436850;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Adding a subtle underline animation */
+h2.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: #436850;
+  bottom: 0;
+  left: 25%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+h2.section-title:hover::after {
+  transform: scaleX(1);
+}
+
+/* Service Box Styling */
+.service-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #436850;
+}
+
+.service-box h3 {
+  font-size: 1.75rem;
+  color: #436850;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-box p {
+  color: #757575;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.service-box ul {
+  list-style: none;
+  padding-left: 0;
+  color: #555;
+}
+
+.service-box ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Hover Effects */
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations for Service Boxes */
+.animated-box {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-box {
+    padding: 20px;
+  }
+
+  h2.section-title {
+    font-size: 2rem;
+  }
+
+  .service-box h3 {
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+<section class="services-section" id="skills" style="background-image: url(images/coding_image.jpeg);">
+  <h2 class="section-title  text-center my-5" style="color: white !important;">Skills</h2>
+
+  <div class="row">
+    <!-- Data Science -->
     <div class="col-lg-4 col-md-6">
-      <div class="service-box">
-
-        <h3>Data science</h3>
-        <p>Here are the most valuable skills that I'm curently Learned about the Data science and Ai .</p>
+      <div class="service-box animated-box">
+        <h3>Data Science</h3>
+        <p>Mastering the art of transforming raw data into meaningful insights and AI models.</p>
         <ul>
-            <li>
-                data collection 
-              </li>
-              <li>
-                data pre-procession
-              </li>
-              <li>
-data analysis              </li>
-              <li>Model creation with keras and tensorflow  </li>
-              <li>
-                model testing and analyzing
-              </li>
-              <li>  Model deploiment with django, flask, or Android  </li>
-              <li>  Data visualisation to showcase the results in intuitive   </li>
-              <li>Deep learning algorithms and LLms </li>
-              <li>Conception and Deployment of Generative AI Models</li>
-              <li>Good level with using SQL and NoSql database</li>
-              <li></li>
+          <li>Data Collection</li>
+          <li>Data Pre-processing</li>
+          <li>Data Analysis</li>
+          <li>Model Creation with Keras & TensorFlow</li>
+          <li>Model Testing & Optimization</li>
+          <li>Model Deployment (Django, Flask, Android)</li>
+          <li>Data Visualization</li>
+          <li>Deep Learning & LLMS</li>
+          <li>SQL & NoSQL Databases</li>
         </ul>
       </div>
     </div>
 
+    <!-- Android Development -->
     <div class="col-lg-4 col-md-6">
-      <div class="service-box">
-       
-        <h3>Android development</h3>
-    <p>Android is another discipline that i'm curious about, working with it to implement AI models to add inituitive user experience to add value to our Ai model</p>
-    <ul>
-        <li>Kotlin programming language</li>
-        <li>Android basics (activity,fragment,activity life cycle ,context...)</li>
-        <li>Ui tool kit with jetpack compose</li>
-        <li>Room database for local storage of data</li>
-        <li>Working with API using Ktor,Retrofit</li>
-        <li>Firebase authonticator and firestore</li>
-        <li>Clean Code by implementation of the MVVM architecture and dependancy injection</li>
-        <li>Implementation of AI models to do the classification the detection and prediction</li>
-
-    </ul>
-  </div>
+      <div class="service-box animated-box">
+        <h3>Android Development</h3>
+        <p>Implementing AI models to create intuitive and powerful Android applications.</p>
+        <ul>
+          <li>Kotlin Programming</li>
+          <li>Android Basics (Activity, Fragment, Lifecycle)</li>
+          <li>Jetpack Compose</li>
+          <li>Room Database</li>
+          <li>API Integration (Ktor, Retrofit)</li>
+          <li>Firebase Authentication & Firestore</li>
+          <li>MVVM Architecture</li>
+          <li>AI Models for Classification & Prediction</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Soft Skills -->
     <div class="col-lg-4 col-md-6">
-      <div class="service-box">
-      
+      <div class="service-box animated-box">
         <h3>Soft Skills</h3>
-        <p>As you know, the technical side only is not enought to be a good data scientist. Soft skills helps to not just be sociable but also to communicate Models to managers and clients</p>
+        <p>Bridging the gap between technical expertise and effective communication with stakeholders.</p>
         <ul>
-            <li>Languages : Arabic(Native), french(B1), English(B2)</li>
-            <li>problem-solving and,having critical and out of the box thinking</li>
-            <li>programming : advaned knowledge in Java,kotlin and Python</li>
-            <li>Communication and collaboration with project team </li>
-            <li>Leadership and project management</li>
-            <li>creativity and innovation</li>
+          <li>Languages: Arabic (Native), French (B1), English (B2)</li>
+          <li>Problem-Solving & Critical Thinking</li>
+          <li>Advanced Knowledge in Java, Kotlin, Python</li>
+          <li>Communication & Collaboration</li>
+          <li>Leadership & Project Management</li>
+          <li>Creativity & Innovation</li>
         </ul>
       </div>
     </div>
-
-</div>
+  </div>
 </section>
+

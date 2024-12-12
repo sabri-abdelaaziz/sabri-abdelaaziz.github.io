@@ -1,154 +1,159 @@
- <style>
-       
+<style>
+    .roadmap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-        .roadmap {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100px;
-            background-color: #f5f5f5;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+    .road {
+        position: relative;
+        width: 90%;
+        height: 50px;
+        background: linear-gradient(to right, #8e7523, #8a4516);
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
+    .point {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .point .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 2px solid #6b8e23;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .point .dev h5,
+    .point .dev h6 {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .point[data-year="2021"] { left: 5%; top: -40px; }
+    .point[data-year="2022"] { left: 20%; top: -40px; }
+    .point[data-year="2023"] { left: 50%; top: -40px; }
+    .point[data-year="2024"] { left: 75%; top: -40px; }
+
+    .point:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background-color: #6b8e23;
+        left: 50%;
+        top: 10px;
+        z-index: -1;
+        border-radius: 10px 1px 10px 1px;
+    }
+
+    .point:first-child:before {
+        display: none;
+    }
+
+    /* Make it responsive */
+    @media screen and (max-width: 768px) {
         .road {
-            position: relative;
-            width: 90%; /* Use percentage for responsiveness */
-            height: 50px;
-            background: linear-gradient(to right, #8e7523, #8a4516);
-            border-radius: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .point {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            height: 30px;
         }
 
         .point .circle {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #ffffff;
-            border: 2px solid #6b8e23;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            width: 15px;
+            height: 15px;
         }
 
-        .point .dev h5,
+        .point .dev h5, 
         .point .dev h6 {
-            margin: 5px 0;
-            font-size: 14px;
+            font-size: 10px;
         }
 
-        .point[data-year="2021"] { left: 5%; top: -40px; }
-        .point[data-year="2022"] { left: 20%; top: -40px; }
-        .point[data-year="2023"] { left: 50%; top: -40px; }
-        .point[data-year="2024"] { left: 75%; top: -40px; }
+        .point[data-year="2021"] { left: 5%; top: -30px; }
+        .point[data-year="2022"] { left: 20%; top: 15px; }
+        .point[data-year="2023"] { left: 60%; top: -30px; }
+        .point[data-year="2024"] { left: 90%; top: 15px; }
+    }
 
-        .point:before {
-            content: "";
-            position: absolute;
-            width: 2px;
+    @media screen and (max-width: 480px) {
+        .road {
             height: 20px;
-            background-color: #6b8e23;
-            left: 50%;
-            top: 10px;
-            z-index: -1;
-            border-radius: 10px 1px 10px 1px;
         }
 
-        .point:first-child:before {
-            display: none;
+        .point .circle {
+            width: 10px;
+            height: 10px;
         }
 
-        /* Make it responsive */
-        @media screen and (max-width: 768px) {
-            .road {
-                height: 30px; /* Reduce road height on mobile */
-            }
-
-            .point .circle {
-                width: 15px;
-                height: 15px;
-            }
-
-            .point .dev h5, 
-            .point .dev h6 {
-                font-size: 10px; /* Reduce font size on smaller screens */
-            }
-
-            .point[data-year="2021"] { left: 5%; top: -30px; }
-            .point[data-year="2022"] { left: 20%; top: 15px; }
-            .point[data-year="2023"] { left: 60%; top: -30px; }
-            .point[data-year="2024"] { left: 90%; top: 15px; }
+        .point .dev h5, 
+        .point .dev h6 {
+            font-size: 10px;
         }
 
-        @media screen and (max-width: 480px) {
-            .road {
-                height: 20px; /* Further reduce road height on very small devices */
-            }
+        .point[data-year="2021"] { left: 5%; top: -20px; }
+        .point[data-year="2022"] { left: 15%; top: -20px; }
+        .point[data-year="2023"] { left: 65%; top: -20px; }
+        .point[data-year="2024"] { left: 90%; top: -20px; }
+    }
 
-            .point .circle {
-                width: 10px;
-                height: 10px;
-            }
+    .text_color{
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
 
-            .point .dev h5, 
-            .point .dev h6 {
-                font-size: 10px; /* Reduce font size for smaller screens */
-            }
-
-            .point[data-year="2021"] { left: 5%; top: -20px; }
-            .point[data-year="2022"] { left: 15%; top: -20px; }
-            .point[data-year="2023"] { left: 65%; top: -20px; }
-            .point[data-year="2024"] { left: 90%; top: -20px; }
-        }
-        .text_color{
-            color: white;
-            text-shadow: 1px 1px 1px black;
-        }
-
-    </style>
-<h2  style="text-shadow:1px solid red;color:#436850" class="section-title  my-2  text-center text-decoration-underline  fs-1 fw-bold">Courses</h2>
    
-    <div class="roadmap p-3" style="background-color: white !important;">
-        
-        <div class="road">
-            <div class="point" data-year="2021">
-                <div class="circle"></div>
-                <div class="dev">
-                    <h5>Baccalauriate</h5>
-                    <h6 class="text_color" >2021</h6>
-                    <h6 class="text_color">Sciences of physics</h6>
-                </div>
+
+    .roadmap p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+</style>
+
+<h2 class="section-title text-center my-5">Education</h2>
+   
+<div class="roadmap p-3" style="background-color: white !important;">
+    <div class="road">
+        <div class="point" data-year="2021">
+            <div class="circle"></div>
+            <div class="dev">
+                <h5>Baccalauriate</h5>
+                <h6 class="text_color">2021</h6>
+                <h6 class="text_color">Sciences of physics</h6>
             </div>
-            <div class="point" data-year="2022">
-                <div class="circle"></div>
-                <div class="dev">
-                    <h5 >University diplomat of technology</h5>
-                    <h6 class="text_color">2022-2023</h6>
-                    <h6 class="text_color">BUSINESS INTELLIGENCE AND DATA SCIENCE</h6>
-                </div>
+        </div>
+        <div class="point" data-year="2022">
+            <div class="circle"></div>
+            <div class="dev">
+                <h5>University Diploma in Technology</h5>
+                <h6 class="text_color">2022-2023</h6>
+                <h6 class="text_color">Business Intelligence and Data Science</h6>
             </div>
-            <div class="point" data-year="2023">
-                <div class="circle"></div>
-                <div class="dev">
-                    <h5>Bachelor's Degree</h5>
-                    <h6 class="text_color">2024</h6>
-                    <h6 class="text_color">DATA ANALYTICS AND AI</h6>
-                </div>
+        </div>
+        <div class="point" data-year="2023">
+            <div class="circle"></div>
+            <div class="dev">
+                <h5>Bachelor's Degree</h5>
+                <h6 class="text_color">2024</h6>
+                <h6 class="text_color">Data Analytics and AI</h6>
             </div>
-            <div class="point" data-year="2024">
-                <div class="circle"></div>
-                <div class="dev">
-                    <h5>Master's Degree</h5>
-                    <h6 class="text_color">2026</h6>
-                    <h6 class="text_color">DATA ANALYTICS AND AI</h6>
-                </div>
+        </div>
+        <div class="point" data-year="2024">
+            <div class="circle"></div>
+            <div class="dev">
+                <h5>Master's Degree</h5>
+                <h6 class="text_color">2026</h6>
+                <h6 class="text_color">Data Analytics and AI</h6>
             </div>
         </div>
     </div>
-
+</div>

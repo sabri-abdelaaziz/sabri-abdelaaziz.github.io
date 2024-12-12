@@ -1,0 +1,68 @@
+
+<style>
+    /* Image Styling */
+.animated-img {
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  object-fit: cover; /* Ensures the image covers the container without distorting */
+  width: 100%; /* Ensures the image is responsive */
+  will-change: transform, box-shadow; /* Optimizing performance for animations */
+}
+
+/* Hover Effects */
+.animated-img:hover {
+  transform: scale(1.05) rotate(2deg); /* Slight zoom and rotation effect */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+  transition: all 0.4s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Adding a subtle fade-in effect when the page loads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-img {
+  animation: fadeIn 1.2s ease-in-out; /* Apply the fade-in animation */
+}
+
+/* Optional: Add a scaling effect while scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  .animated-img {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  .animated-img:hover {
+    transform: scale(1.1); /* Larger zoom effect */
+  }
+}
+
+</style>
+
+<div class="container-fluid"  id="about" >
+  
+  <div class="row  d-flex align-items-center justify-content-evenly">
+     
+  
+     <div class="col-md-6 text-center ">
+        <img style="border-radius: 30px; box-shadow: 1px 1px 7px black; height: 490px;" 
+        class="img-fluid w-100 animated-img" 
+        src="images/nki.jpg" 
+        alt="Image Description">
+     </div>
+      <div class="col-md-6 ">
+         <p  style="font-family: serif !important;text-shadow:2px 1px 2px white ;" class="fs-4 fw-bold  w-100">
+          As a data scientist, I specialize in transforming complex data into actionable insights that drive strategic decision-making. With expertise in machine learning, statistical analysis, and data visualization, I harness the power of data to solve challenging problems across diverse industries. My passion for data science stems from my ability to uncover patterns, predict trends, and provide innovative solutions that add real value to businesses.<br> This portfolio showcases my projects, methodologies, and the tools I use to extract meaningful information from raw data, demonstrating my skills in data-driven problem solving and analytical thinking.
+     
+      </div>
+  
+  
+  </div>
+  
+  
+  </div>

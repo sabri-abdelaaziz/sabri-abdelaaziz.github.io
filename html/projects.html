@@ -25,8 +25,8 @@
 }
 
 .category-button {
-  background-color: #007bff; /* Primary color for buttons */
-  color: white; /* Text color */
+  background: linear-gradient(90deg, #6a85b6, #4a6691, #38547a, #2c4467, #223552, #1a2a42, #112035, #0a1729);
+ color: white; /* Text color */
   border: none; /* Remove border */
   border-radius: 25px; /* Rounded corners */
   padding: 10px 20px; /* Padding for buttons */
@@ -37,13 +37,13 @@
 }
 
 .category-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: white; /* Darker shade on hover */
   transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .category-button:focus {
   outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 5px #0056b3; /* Custom focus effect */
+  box-shadow: 0 0 5px white; /* Custom focus effect */
 }
 
     .services-section {
@@ -104,7 +104,7 @@
     }
     button:hover {
       background-color:white !important;
-      color: #007bff;
+      color: #fbfdfe;
       border: 1px solid black;
       text-decoration: underline;
     }
@@ -120,19 +120,18 @@
   
   <!-- Our Projects -->
   <section class="container my-4" id="projects">
-    <h2 style="text-shadow:1px solid red;color:#436850" class="m-5 text-center  text-decoration-underline fs-1 fw-bold">Projects</h2>
+    <h2 style="text-shadow:1px solid red;color:#436850" class="m-5 section-title fs-1 fw-bold">Projects</h2>
     
     <div id="category-list" class="category-list">
         <button class="category-button" data-category="all">All Projects</button>
-        <button class="category-button" data-category="ai">AI Projects</button>
         <button class="category-button" data-category="android">Android Projects</button>
         <button class="category-button" data-category="django">Django Projects</button>
-        <button class="category-button" data-category="others">Others</button>
-      </div>
+         <button class="category-button" data-category="others">Others</button>
+      </div> 
       
     
-    <div id="project-list" class="row">
-        <!-- Android Stock Management App -->
+    <div id="project-list" class="row d-flex align-items-center justify-content-center flex-direction-row">
+       
         <div class="col-12 col-md-3" data-category="android">
           <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
             <img src="images/stockManagement.jpeg" class="card-img-top" alt="Scholarship Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
@@ -160,15 +159,14 @@
               </div>
             </div>
           </div>
-        </div>
-         <!-- Others Project -->
+        </div> 
        <div class="col-12 col-md-3 project-card" data-category="ai,android">
         <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
           <img src="images/gmini.jpeg" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;" class="card-img-top" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
               Gemini pro - Generative AI 
-            </h5>
+            </h5> 
             <div class="div langs d-flex align-items-center ">
               <img src="images/projets/kotlin.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
               <img src="images/projets/gemini.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
@@ -200,12 +198,12 @@
         </div>
       </div>
       <!-- django Project -->
-      <div class="col-12 col-md-3" data-category="django">
+      <div class="col-12 col-md-3  project-card" data-category="django">
         <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
           <img src="images/commune.png" class="card-img-top" alt="Municipality Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
           <div class="card-body">
             <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
-              Taliouine Municipality Application
+              Taliouine Municipality Application Using Django
             </h5>
             <div class="div langs d-flex align-items-center ">
               <img src="images/projets/python.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
@@ -216,7 +214,7 @@
               <img src="images/projets/xampp.png" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
             </div>
             <p class="card-text">
-              An application for the local community of Taliouine that provides services to residents online.
+              An application for the local community of Taliouine that provides services to residents online. PFE project 
             </p>
             <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
               <p class="card-date" style="font-size: 14px; color: gray;">
@@ -229,6 +227,7 @@
             </div>
           </div>
         </div>
+        
       </div>
         <!-- AI Project -->
         <div class="col-12 col-md-3" data-category="ai">
@@ -236,7 +235,7 @@
             <img src="images/fashionStore.png" class="card-img-top" alt="AI Project" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;">
             <div class="card-body">
               <h5 class="card-title text-success" style="font-size: 22px; font-weight: bold; text-decoration: underline;">
-                AI-Based Project
+                AI-Based Project : Image Classification
               </h5>
               <div class="div langs d-flex align-items-center ">
                 <img src="images/projets/python.jpeg" class="img-fluid" alt="AI Project" style=" border-top-left-radius: 40px; border-top-right-radius: 40px;">
@@ -248,7 +247,7 @@
               </div>
              
               <p class="card-text">
-                This project involves developing an application to search for clothing using artificial intelligence.
+                This project involves developing an application to search for clothing using artificial intelligence especially Deep Leaning CNN .
               </p>
               <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
                 <p class="card-date" style="font-size: 14px; color: gray;">
@@ -265,7 +264,7 @@
         
   
       <!-- Others Project -->
-      <div class="col-12 col-md-3 project-card" data-category="others">
+     <div class="col-12 col-md-3 project-card" data-category="others">
         <div class="card mb-4" style="border-radius: 40px !important; box-shadow: 1px 1px 1px 1px black;">
           <img src="images/csnmaroc.png" style="height: 200px; border-top-left-radius: 40px; border-top-right-radius: 40px;" class="card-img-top" alt="Project 2">
           <div class="card-body">
@@ -284,13 +283,13 @@
             </p>
             
             <!-- Date of Creation -->
-            <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
+           <div class="div d-flex align-items-center justify-content-evenly h-25 p-0 w-100">
               <p class="card-date" style="font-size: 14px; color: gray;">
                 Date Created: <span>07-2022</span>
               </p>
               
               <!-- GitHub Icon -->
-              <a href="https://gitlab.com/Abdelaazizsabri/csnmaroc-site" target="_blank" aria-label="GitHub Repository" class="github-icon">
+               <a href="https://gitlab.com/Abdelaazizsabri/csnmaroc-site" target="_blank" aria-label="GitHub Repository" class="github-icon">
                 <img src="images/gitlab.jpg" alt="GitHub" style="width: 34px; height: 34px;" />
               </a>
               
@@ -298,10 +297,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      
-      
+      </div> 
   
     
   
