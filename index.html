@@ -1,272 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- css-->
-<!-- css bootstrap -->
-<style>
-  /* Selecteur Universel */
-  *{
-    font-family: 'Times New Roman', Times, serif;
-    box-sizing: border-box;
-    
-  }
-  p{
-    color: black !important;
-  }
-      form{    
-        border-radius:20px ;
-      }
-      label{
-        color: rgb(111, 59, 59) !important;
-      }
-      a>img:hover{
-        box-shadow:inset 2px 2px 2px 4px rgb(160, 116, 140);
-        transform: rotate(0.9) !important;}
-.ser{
- padding: 1px;
-}
-.ser:hover{
- transform: scale(1.02);
- cursor: pointer;
- transition: all ease .2;
-}
-
-    h1.text-center {
-      text-align: center;
-      color: #333; /* Dark text color */
-      font-size: 2.5rem; /* Font size */
-      font-weight: bold; /* Font weight */
-    }
-    </style>
-
-<!--intégre bootstrap -->
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  
-    
-<!---icons--->
- <!-- Bootstrap CSS -->
-
-    <!-- Bootstrap Font Icon CSS -->
-    <link rel="stylesheet" href=
-"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/animation.css">
-
-<!-- end css-->
-<!-- add fav icon to the page -->
-<link rel="icon" type="image/png" href="images/a.jpg">
-<link rel="shortcut icon" type="image/jpg" href="images/a.jpg">
- <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Sabri Abdelaaziz </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabri Abdelaaziz Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body  onload="countNumbers()"   >
-  <div id="header_content"></div>
-  <script>
-    fetch('html/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header_content').innerHTML = data;
-      })
-      .catch(error => console.log('Error loading the file:', error));
-  </script>
-     <div id="welcom_section" class="mt-3 p-1"></div>
-
-  <script>
-    fetch('html/welcom_section.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('welcom_section').innerHTML = data;
-      })
-      .catch(error => console.log('Error loading the file:', error));
-  </script>
-
-
-<div id="about"></div>
-
-<script>
-  fetch('html/about.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('about').innerHTML = data;
-    })
-    .catch(error => console.log('Error loading the file:', error));
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="skills_section"></div>
-
-  <script>
-    fetch('html/skills.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('skills_section').innerHTML = data;
-      })
-      .catch(error => console.log('Error loading the file:', error));
-  </script>
-
-
-<div id="cources_section"></div>
-
-  <script>
-    fetch('html/cources.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('cources_section').innerHTML = data;
-      })
-      .catch(error => console.log('Error loading the file:', error));
-  </script> 
-
-<div id="projects_section"></div>
-
-
-<script>
-  fetch('html/projects.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('projects_section').innerHTML = data;
-          initializeProjectFilters(); // Call the function to set up filters
-      })
-      .catch(error => console.log('Error loading the file:', error));
-
-  function initializeProjectFilters() {
-      const categoryList = document.getElementById('category-list');
-      const projects = document.querySelectorAll('#project-list .col-md-3');
-
-      categoryList.addEventListener('click', (e) => {
-          if (e.target.tagName === 'BUTTON') {
-              const selectedCategory = e.target.getAttribute('data-category');
-
-              // Remove active class from all buttons
-              const buttons = categoryList.querySelectorAll('button');
-              buttons.forEach(button => button.classList.remove('active'));
-
-              // Add active class to the selected button
-              e.target.classList.add('active');
-
-              projects.forEach(project => {
-                  const categories = project.getAttribute('data-category').split(',');
-
-                  if (selectedCategory === 'all') {
-                      project.style.display = 'block'; // Show all projects
-                  } else if (categories.includes(selectedCategory)) {
-                      project.style.display = 'block'; // Show matching projects
-                  } else {
-                      project.style.display = 'none'; // Hide non-matching projects
-                  }
-              });
-          }
-      });
-  }
-</script>
-
-
-<div id="experiences_section"></div>
-
-<script>
-  fetch('html/experiences.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('experiences_section').innerHTML = data;
-    })
-    .catch(error => console.log('Error loading the file:', error));
-</script>
-
-<div id="certificates" class="mt-3 p-1"></div>
-
-<script>
-  fetch('html/certificates.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('certificates').innerHTML = data;
-    })
-    .catch(error => console.log('Error loading the file:', error));
-</script>
-<div id="footer"></div>
-
-<script>
-  fetch('html/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    })
-    .catch(error => console.log('Error loading the file:', error));
-</script>
-
-
- 
-      
-
-
-         
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-
-<!-- js-bootstrap-->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- <!--icons links-->
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.13.0/dist/umd/popper.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!-- end js bootstrap-->
-  <!-- contact Modal -->
-  <div class="modal fade my-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog my-5">
-      <div class="modal-content">
-        <div class="modal-header">
-        
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <span class="brand-text">Sabri</span>
+                <span class="brand-dot">Abdelaaziz</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                        <a class="nav-link contact-btn" href="#contact">Get in Touch</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="modal-body text-center text-info fs-3">
-        <p>Contact :</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-content">
+                        <h1 class="hero-title animate__animated animate__fadeInUp">
+                            Hi, I'm <span class="highlight">Sabri Abdelaaziz</span>
+                        </h1>
+                        <h2 class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                            <span class="txt-rotate" data-period="2000" 
+                                  data-rotate='["Data Scientist", "Machine Learning Engineer", "AI Enthusiast"]'>
+                            </span>
+                        </h2>
+                        <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
+                            Transforming data into meaningful insights and building intelligent solutions.
+                        </p>
+                        <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">
+                                View Projects <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">
+                                Contact Me
+                            </a>
+                        </div>
+                        <div class="hero-social animate__animated animate__fadeInUp animate__delay-4s">
+                            <a href="#" class="social-icon" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            <img src="images/nki.jpg" alt="Sabri Abdelaaziz" class="img-fluid">
+                            <div class="floating-card card1">
+                                <i class="fas fa-brain"></i>
+                                <span>AI & ML</span>
+                            </div>
+                            <div class="floating-card card2">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Science</span>
+                            </div>
+                            <div class="floating-card card3">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Android Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-section">
+            <div class="scroll-down-container">
+                <div class="scroll-down">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </div>
+            </div>
+        </div>
+    </section>
   
-        <div class="text-center  btn-group d-flex  m-2">
-          
-            
-         <a style="border-radius: 50%;" href="tel:+212671344804" class="btn btn-success border mx-2" title="Contactez-nous par téléphone">
-            <i class="bi bi-telephone-fill"></i>
-        </a>
-         <a style="border-radius:50%" href="mailto:azizsabri072@gmail.com" class="btn btn-warning border mx-2" title="Contact us at email"><i class="bi bi-envelope"></i></a>
-         <a style="border-radius:50%" href="https://api.whatsapp.com/send?phone=+212671344804&text=Bonjour!" class="  btn btn-success border  mx-2 " title="contact us at whatssap"><i class="bi bi-whatsapp "></i></a>
-  
-      
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="position-relative">
+                        <img src="images/nki.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-4">
+                        <div class="experience-badge">
+                            <span class="h4 d-block">2+</span>
+                            <span class="small">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <p class="lead mb-4">
+                        Passionate data scientist with expertise in machine learning, statistical analysis, and data visualization. 
+                        Committed to solving complex problems and delivering data-driven insights.
+                    </p>
+                    <div class="mt-4">
+                        <h4 class="mb-3">Quick Facts</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="fact-item">
+                                    <i class="fas fa-chart-line fa-2x mb-2"></i>
+                                    <h5>Data Analysis</h5>
+                                    <p>Expert in statistical analysis and data visualization</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="fact-item">
+                                    <i class="fas fa-brain fa-2x mb-2"></i>
+                                    <h5>Machine Learning</h5>
+                                    <p>Specialized in deep learning and NLP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <h2 class="section-title text-center my-5">Education</h2>
+        <div class="roadmap p-3" style="background-color: white !important;">
+            <div class="road">
+                <div class="point" data-year="2021">
+                    <div class="circle"></div>
+                    <div class="dev">
+                        <h5>Baccalauriate</h5>
+                        <h6 class="text_color">2021</h6>
+                        <h6 class="text_color">Sciences of physics</h6>
+                    </div>
+                </div>
+                <div class="point" data-year="2022">
+                    <div class="circle"></div>
+                    <div class="dev">
+                        <h5>University Diploma in Technology</h5>
+                        <h6 class="text_color">2022-2023</h6>
+                        <h6 class="text_color">Business Intelligence and Data Science</h6>
+                    </div>
+                </div>
+                <div class="point" data-year="2023">
+                    <div class="circle"></div>
+                    <div class="dev">
+                        <h5>Bachelor's Degree</h5>
+                        <h6 class="text_color">2024</h6>
+                        <h6 class="text_color">Data Analytics and AI</h6>
+                    </div>
+                </div>
+                <div class="point" data-year="2024">
+                    <div class="circle"></div>
+                    <div class="dev">
+                        <h5>Master's Degree</h5>
+                        <h6 class="text_color">2026</h6>
+                        <h6 class="text_color">Data Analytics and AI</h6>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Back</button>
-         
-  
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Professional Experience</h2>
+            <div class="experience-wrapper">
+                <!-- CSN Maroc Internship -->
+                <div class="experience-card" data-aos="fade-up">
+                    <div class="experience-header">
+                        <div class="experience-company">
+                            <img src="images/csnmaroc.png" alt="CSN Maroc" class="company-logo">
+                            <div class="company-info">
+                                <h3>CSN Maroc Internship</h3>
+                                <span class="position">Web Development</span>
+                            </div>
+                        </div>
+                        <div class="experience-duration">
+                            <span class="date">June 2022 - July 2022</span>
+                        </div>
+                    </div>
+                    <div class="experience-body">
+                        <p class="experience-description">
+                            During my initial internship, I developed website to represent services of the accountant service using PHP, HTML, BOOTSTRAP, JavaScript.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <div class="project-preview">
+                            <img src="images/csnmaroc.png" alt="CSN Maroc Project" class="preview-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Internship -->
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience-header">
+                        <div class="experience-company">
+                            <img src="images/commune.png" alt="Web Development" class="company-logo">
+                            <div class="company-info">
+                                <h3>Web Development Internship</h3>
+                                <span class="position">Full Stack Development</span>
+                            </div>
+                        </div>
+                        <div class="experience-duration">
+                            <span class="date">June 2023</span>
+                        </div>
+                    </div>
+                    <div class="experience-body">
+                        <p class="experience-description">
+                            In this internship, I designed and developed dynamic and responsive websites. I worked on front-end and back-end development using technologies like HTML, CSS, JavaScript, and Python(Django).
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                        </div>
+                        <div class="project-preview">
+                            <img src="images/commune.png" alt="Web Development Project" class="preview-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  </div> 
- 
+    </section>
+
+    <!-- Skills Section -->
+    <section class="services-section" id="skills" style="background-image: url(images/coding_image.jpeg);">
+        <h2 class="section-title text-center my-5" style="color: white !important;">Skills</h2>
+
+        <div class="row">
+            <!-- Data Science -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box animated-box">
+                    <h3>Data Science</h3>
+                    <p>Mastering the art of transforming raw data into meaningful insights and AI models.</p>
+                    <ul>
+                        <li>Data Collection</li>
+                        <li>Data Pre-processing</li>
+                        <li>Data Analysis</li>
+                        <li>Model Creation with Keras & TensorFlow</li>
+                        <li>Model Testing & Optimization</li>
+                        <li>Model Deployment (Django, Flask, Android)</li>
+                        <li>Data Visualization</li>
+                        <li>Deep Learning & LLMS</li>
+                        <li>SQL & NoSQL Databases</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Android Development -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box animated-box">
+                    <h3>Android Development</h3>
+                    <p>Implementing AI models to create intuitive and powerful Android applications.</p>
+                    <ul>
+                        <li>Kotlin Programming</li>
+                        <li>Android Basics (Activity, Fragment, Lifecycle)</li>
+                        <li>Jetpack Compose</li>
+                        <li>Room Database</li>
+                        <li>API Integration (Ktor, Retrofit)</li>
+                        <li>Firebase Authentication & Firestore</li>
+                        <li>MVVM Architecture</li>
+                        <li>AI Models for Classification & Prediction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box animated-box">
+                    <h3>Soft Skills</h3>
+                    <p>Bridging the gap between technical expertise and effective communication with stakeholders.</p>
+                    <ul>
+                        <li>Languages: Arabic (Native), French (B1), English (B2)</li>
+                        <li>Problem-Solving & Critical Thinking</li>
+                        <li>Advanced Knowledge in Java, Kotlin, Python</li>
+                        <li>Communication & Collaboration</li>
+                        <li>Leadership & Project Management</li>
+                        <li>Creativity & Innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my best work in Android Development and AI</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> All
+                </button>
+                <button class="filter-btn" data-filter="android">
+                    <i class="fab fa-android"></i> Android
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <i class="fas fa-brain"></i> AI
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Stock Management Project -->
+                <div class="project-item" data-category="android">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/stockManagement.jpeg" alt="Stock Management App">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Stock Management APP</h3>
+                                    <p>A comprehensive Android application for efficient store inventory management</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">Android</span>
+                                <span class="tag">Kotlin</span>
+                                <span class="tag">Room DB</span>
+                            </div>
+                            <div class="project-tech">
+                                <img src="images/projets/kotlin.png" alt="Kotlin" title="Kotlin">
+                                <img src="images/projets/android.png" alt="Android" title="Android">
+                                <img src="images/projets/room.jpeg" alt="Room" title="Room Database">
+                                <img src="images/projets/mvvm.png" alt="MVVM" title="MVVM Architecture">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main" 
+                                   target="_blank" 
+                                   class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <span class="project-date">
+                                    <i class="far fa-calendar-alt"></i> August 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gemini Pro Project -->
+                <div class="project-item" data-category="android,ai">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/gmini.jpeg" alt="Gemini Pro AI">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Gemini Pro - AI Assistant</h3>
+                                    <p>Android implementation of Google's Gemini Pro API for intuitive AI interactions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Android</span>
+                                <span class="tag">Gemini</span>
+                            </div>
+                            <div class="project-tech">
+                                <img src="images/projets/kotlin.png" alt="Kotlin" title="Kotlin">
+                                <img src="images/projets/gemini.png" alt="Gemini" title="Gemini AI">
+                                <img src="images/projets/android.png" alt="Android" title="Android">
+                                <img src="images/projets/room.jpeg" alt="Room" title="Room Database">
+                                <img src="images/projets/mvvm.png" alt="MVVM" title="MVVM Architecture">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test" 
+                                   target="_blank" 
+                                   class="project-link github">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <a href="https://www.linkedin.com/posts/sabriabdelaaziz_geminiabrproabrversion-ai-generativeabrai-activity-7164675094391279616-TY4a" 
+                                   target="_blank" 
+                                   class="project-link linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>View Demo</span>
+                                </a>
+                                <span class="project-date">
+                                    <i class="far fa-calendar-alt"></i> January 2024
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certificates-section" id="certificates">
+        <h2 class="certificates-title text-center my-5" style="color: rgb(6, 5, 5) !important;">Certificates</h2>
+
+        <div class="row justify-content-center">
+            <!-- Certificate 2 -->
+            <a style="cursor: pointer;text-decoration: none;" class="col-md-3" href="https://learn.365datascience.com/certificates/CC-38FE5F934C/">
+                <div>
+                    <div class="certificate-card">
+                        <img src="images/certificates/CC-38FE5F934C.jpg" alt="Certificate 2" class="card-img-top">
+                        <h5>Python Programmer Bootcamp</h5>
+                        <p>Completed a comprehensive course on Python programming and its application. Starting from basics to OOP then some real world applications implementation.</p>
+                        <p><strong><img width="20px" src="images/certificates/365datascience.png" alt=""></strong> 365DataScience</p>
+                        <p><strong>Date:</strong> 14 November 2024</p>
+                        <p><strong>ID:</strong> CC-38FE5F934C</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificate 1 -->
+            <a class="col-md-3" style="cursor: pointer;text-decoration: none;" href="https://learn.365datascience.com/certificates/CC-A4B684072E/">
+                <div>
+                    <div class="certificate-card">
+                        <img src="images/certificates/CC-A4B684072E.jpg" alt="Certificate 1" class="card-img-top">
+                        <h5>Introduction to Python</h5>
+                        <p>Achieved a certification in Python at 365DataScience, mastering basics of python (data structure, functions, data types). I've learned and implemented python to solve complicated problems</p>
+                        <p><strong><img width="20px" src="images/certificates/365datascience.png" alt=""></strong> 365DataScience</p>
+                        <p><strong>Date:</strong> 02 November 2024</p>
+                        <p><strong>ID:</strong> CC-A4B684072E</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificate 3 -->
+            <a class="col-md-3" style="cursor: pointer;text-decoration: none;" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/7229b3176b5706f413e8aea1eb56ed9360fbe2f0">
+                <div>
+                    <div class="certificate-card">
+                        <img src="images/certificates/supervised-ml-dc.png" height="200px" alt="Certificate 1" class="card-img-top">
+                        <h5>Supervised learning course with Scikit-learn</h5>
+                        <p>This courses has helped me to master sk-learn library in python. Scikit-learn library contain various tools to create and manipulate models whether machine learning, deep learning. It helped to build well-structured AI models</p>
+                        <p><strong><img width="20px" src="images/certificates/datacamp.png" alt=""></strong> DataCamp</p>
+                        <p><strong>Date:</strong> APR 09,2024</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8" data-aos="zoom-in">
+                    <form id="contact-form" class="contact-form">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary hero-btn w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Location</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <h5>Connect With Me</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 Your Name. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
-</html>
-
- 
+</html> 
