@@ -9,11 +9,20 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+     <style>
+    body {
+      height: 200vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+  </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -62,11 +71,19 @@
                         <h1 class="hero-title animate__animated animate__fadeInUp">
                             Hi, I'm <span class="highlight">Sabri Abdelaaziz</span>
                         </h1>
-                        <h2 class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
-                            <span class="txt-rotate" data-period="2000" 
-                                  data-rotate='["Data Scientist", "Machine Learning Engineer", "AI Enthusiast"]'>
-                            </span>
-                        </h2>
+                       <h2 class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+  <span class="txt-rotate" data-period="2000" data-rotate='["Data Scientist", "Machine Learning Engineer", "AI Enthusiast"]'>
+    Data Scientist
+  </span>
+
+  <!-- Invisible clone block (for fixing height/width) -->
+  <span class="txt-clones">
+    <span>Data Scientist</span>
+    <span>Machine Learning Engineer</span>
+    <span>AI Enthusiast</span>
+  </span>
+</h2>
+
                         <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
                             Transforming data into meaningful insights and building intelligent solutions.
                         </p>
@@ -123,54 +140,55 @@
         </div>
     </section>
   
+   
+
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="position-relative">
-                        <img src="images/nki.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-4">
-                        <div class="experience-badge">
-                            <span class="h4 d-block">2+</span>
-                            <span class="small">Years Experience</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <p class="lead mb-4">
-                        Passionate data scientist with expertise in machine learning, statistical analysis, and data visualization. 
-                        Committed to solving complex problems and delivering data-driven insights.
-                    </p>
-                    <div class="mt-4">
-                        <h4 class="mb-3">Quick Facts</h4>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="fact-item">
-                                    <i class="fas fa-chart-line fa-2x mb-2"></i>
-                                    <h5>Data Analysis</h5>
-                                    <p>Expert in statistical analysis and data visualization</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="fact-item">
-                                    <i class="fas fa-brain fa-2x mb-2"></i>
-                                    <h5>Machine Learning</h5>
-                                    <p>Specialized in deep learning and NLP</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Profile Image & Stats -->
+          <div class="col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+       <div class="about-profile-wrapper mx-auto">
+  <img src="images/nki.jpg" alt="Profile" class="about-profile-img img-fluid">
+</div>
+
+            <div class="d-flex justify-content-center justify-content-center gap-3 mt-4">
+              <div class="about-stat">
+                <span class="about-stat-value text-primary">2+</span>
+                <span class="about-stat-label">Years Exp</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-value">10+</span>
+                <span class="about-stat-label">Projects</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-value">3</span>
+                <span class="about-stat-label">Certs</span>
+              </div>
             </div>
+          </div>
+          <!-- Bio & Details -->
+          <div class="col-lg-7">
+            <h2 class="section-title mb-3">About Me</h2>
+            <p class="lead mb-4">
+              I'm a passionate <strong>Data Scientist</strong> with a love for turning data into actionable insights. My expertise spans machine learning, AI, and full-stack development. I thrive on solving complex problems and building intelligent solutions that make a difference.
+            </p>
+            <ul class="about-list mb-4">
+              <li><i class="fas fa-check-circle text-primary me-2"></i> Machine Learning & AI Enthusiast</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> Android & Web Developer</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i> Strong communicator & team player</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-5">
+    <section id="education" class="py-3 text-center">
         <h2 class="section-title text-center my-5">Education</h2>
-        <div class="roadmap p-3" style="background-color: white !important;">
-            <div class="road">
+        <div class="roadmap" style="background-color: white !important;width: 100% !important;">
+            <div class="road" >
                 <div class="point" data-year="2021">
                     <div class="circle"></div>
                     <div class="dev">
@@ -195,91 +213,82 @@
                         <h6 class="text_color">Data Analytics and AI</h6>
                     </div>
                 </div>
-                <div class="point" data-year="2024">
+                <!-- <div class="point" data-year="2024">
                     <div class="circle"></div>
                     <div class="dev">
                         <h5>Master's Degree</h5>
                         <h6 class="text_color">2026</h6>
                         <h6 class="text_color">Data Analytics and AI</h6>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Professional Experience</h2>
-            <div class="experience-wrapper">
-                <!-- CSN Maroc Internship -->
-                <div class="experience-card" data-aos="fade-up">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <img src="images/csnmaroc.png" alt="CSN Maroc" class="company-logo">
-                            <div class="company-info">
-                                <h3>CSN Maroc Internship</h3>
-                                <span class="position">Web Development</span>
-                            </div>
-                        </div>
-                        <div class="experience-duration">
-                            <span class="date">June 2022 - July 2022</span>
-                        </div>
-                    </div>
-                    <div class="experience-body">
-                        <p class="experience-description">
-                            During my initial internship, I developed website to represent services of the accountant service using PHP, HTML, BOOTSTRAP, JavaScript.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">PHP</span>
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">Bootstrap</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
-                        <div class="project-preview">
-                            <img src="images/csnmaroc.png" alt="CSN Maroc Project" class="preview-image">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Development Internship -->
-                <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="experience-header">
-                        <div class="experience-company">
-                            <img src="images/commune.png" alt="Web Development" class="company-logo">
-                            <div class="company-info">
-                                <h3>Web Development Internship</h3>
-                                <span class="position">Full Stack Development</span>
-                            </div>
-                        </div>
-                        <div class="experience-duration">
-                            <span class="date">June 2023</span>
-                        </div>
-                    </div>
-                    <div class="experience-body">
-                        <p class="experience-description">
-                            In this internship, I designed and developed dynamic and responsive websites. I worked on front-end and back-end development using technologies like HTML, CSS, JavaScript, and Python(Django).
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Django</span>
-                        </div>
-                        <div class="project-preview">
-                            <img src="images/commune.png" alt="Web Development Project" class="preview-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center">
+  <h2 class="section-title text-center mb-5">Professional Experience</h2>
+      
         </div>
+        <div class="row g-4">
+          <!-- Experience Card 1 -->
+          <div class="col-md-6">
+            <div class="exp-card p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <img src="images/csnmaroc.png" alt="CSN Maroc" class="exp-logo me-3">
+                <div>
+                  <h5 class="mb-1">CSN Maroc Internship</h5>
+                  <span class="exp-role">Web Development</span>
+                  <div class="exp-duration">June 2022 - July 2022</div>
+                </div>
+              </div>
+              <p class="exp-desc mb-3">
+                Developed a website to represent accountant services using PHP, HTML, Bootstrap, and JavaScript.
+              </p>
+              <div class="exp-tech">
+                <span class="badge bg-light text-dark me-2 mb-1">PHP</span>
+                <span class="badge bg-light text-dark me-2 mb-1">HTML</span>
+                <span class="badge bg-light text-dark me-2 mb-1">Bootstrap</span>
+                <span class="badge bg-light text-dark me-2 mb-1">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <!-- Experience Card 2 -->
+          <div class="col-md-6">
+            <div class="exp-card p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <img src="images/commune.png" alt="Commune" class="exp-logo me-3">
+                <div>
+                  <h5 class="mb-1">Web Development Internship</h5>
+                  <span class="exp-role">Full Stack Development</span>
+                  <div class="exp-duration">June 2023</div>
+                </div>
+              </div>
+              <p class="exp-desc mb-3">
+                Designed and developed dynamic, responsive websites. Worked on front-end and back-end using HTML, CSS, JavaScript, and Python (Django).
+              </p>
+              <div class="exp-tech">
+                <span class="badge bg-light text-dark me-2 mb-1">HTML</span>
+                <span class="badge bg-light text-dark me-2 mb-1">CSS</span>
+                <span class="badge bg-light text-dark me-2 mb-1">JavaScript</span>
+                <span class="badge bg-light text-dark me-2 mb-1">Python</span>
+                <span class="badge bg-light text-dark me-2 mb-1">Django</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="services-section" id="skills" style="background-image: url(images/coding_image.jpeg);">
-        <h2 class="section-title text-center my-5" style="color: white !important;">Skills</h2>
+    <section class="services-section" id="skills" >
+            <div class="text-center text-dark">
+  <h2 class="section-title text-center mb-5" >Skills</h2>
 
+            </div>
+      
         <div class="row">
             <!-- Data Science -->
             <div class="col-lg-4 col-md-6">
@@ -337,121 +346,143 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcasing my best work in Android Development and AI</p>
-            </div>
-
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th-large"></i> All
-                </button>
-                <button class="filter-btn" data-filter="android">
-                    <i class="fab fa-android"></i> Android
-                </button>
-                <button class="filter-btn" data-filter="ai">
-                    <i class="fas fa-brain"></i> AI
-                </button>
-                <button class="filter-btn" data-filter="web">
-                    <i class="fas fa-globe"></i> Web
-                </button>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Stock Management Project -->
-                <div class="project-item" data-category="android">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/stockManagement.jpeg" alt="Stock Management App">
-                            <div class="project-overlay">
-                                <div class="project-info">
-                                    <h3>Stock Management APP</h3>
-                                    <p>A comprehensive Android application for efficient store inventory management</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="project-tags">
-                                <span class="tag">Android</span>
-                                <span class="tag">Kotlin</span>
-                                <span class="tag">Room DB</span>
-                            </div>
-                            <div class="project-tech">
-                                <img src="images/projets/kotlin.png" alt="Kotlin" title="Kotlin">
-                                <img src="images/projets/android.png" alt="Android" title="Android">
-                                <img src="images/projets/room.jpeg" alt="Room" title="Room Database">
-                                <img src="images/projets/mvvm.png" alt="MVVM" title="MVVM Architecture">
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main" 
-                                   target="_blank" 
-                                   class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    <span>View Code</span>
-                                </a>
-                                <span class="project-date">
-                                    <i class="far fa-calendar-alt"></i> August 2024
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gemini Pro Project -->
-                <div class="project-item" data-category="android,ai">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/gmini.jpeg" alt="Gemini Pro AI">
-                            <div class="project-overlay">
-                                <div class="project-info">
-                                    <h3>Gemini Pro - AI Assistant</h3>
-                                    <p>Android implementation of Google's Gemini Pro API for intuitive AI interactions</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="project-tags">
-                                <span class="tag">AI</span>
-                                <span class="tag">Android</span>
-                                <span class="tag">Gemini</span>
-                            </div>
-                            <div class="project-tech">
-                                <img src="images/projets/kotlin.png" alt="Kotlin" title="Kotlin">
-                                <img src="images/projets/gemini.png" alt="Gemini" title="Gemini AI">
-                                <img src="images/projets/android.png" alt="Android" title="Android">
-                                <img src="images/projets/room.jpeg" alt="Room" title="Room Database">
-                                <img src="images/projets/mvvm.png" alt="MVVM" title="MVVM Architecture">
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test" 
-                                   target="_blank" 
-                                   class="project-link github">
-                                    <i class="fab fa-github"></i>
-                                    <span>View Code</span>
-                                </a>
-                                <a href="https://www.linkedin.com/posts/sabriabdelaaziz_geminiabrproabrversion-ai-generativeabrai-activity-7164675094391279616-TY4a" 
-                                   target="_blank" 
-                                   class="project-link linkedin">
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>View Demo</span>
-                                </a>
-                                <span class="project-date">
-                                    <i class="far fa-calendar-alt"></i> January 2024
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="projects" class="projects-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A selection of my best work in Android, AI, and Web Development</p>
         </div>
+        <div class="row g-4">
+          <!-- Project Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/stockManagement.jpeg" class="project-img" alt="Stock Management App">
+              <div class="project-body">
+                <h5 class="project-title">Stock Management APP</h5>
+                <p class="project-desc">An Android app for efficient store inventory management.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">Android</span>
+                  <span class="badge bg-light text-dark me-1">Kotlin</span>
+                  <span class="badge bg-light text-dark me-1">Room DB</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <span class="project-date text-muted">08/2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/gmini.jpeg" class="project-img" alt="Gemini Pro AI">
+              <div class="project-body">
+                <h5 class="project-title">Gemini Pro - Generative AI</h5>
+                <p class="project-desc">Android implementation of Google's Gemini Pro API for intuitive AI interactions.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">Android</span>
+                  <span class="badge bg-light text-dark me-1">AI</span>
+                  <span class="badge bg-light text-dark me-1">Gemini</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/posts/sabriabdelaaziz_geminiabrproabrversion-ai-generativeabrai-activity-7164675094391279616-TY4a" target="_blank" class="btn btn-outline-secondary btn-sm me-2">Demo</a>
+                  <span class="project-date text-muted">01/2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/commune.png" class="project-img" alt="Municipality App">
+              <div class="project-body">
+                <h5 class="project-title">Taliouine Municipality App</h5>
+                <p class="project-desc">A Django web app for local community services and administration.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">Django</span>
+                  <span class="badge bg-light text-dark me-1">Python</span>
+                  <span class="badge bg-light text-dark me-1">HTML</span>
+                  <span class="badge bg-light text-dark me-1">CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/sabri-abdelaaziz/communeTaliouine" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <span class="project-date text-muted">06/2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 4 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/fashionStore.png" class="project-img" alt="AI-Based Project : Image Classification">
+              <div class="project-body">
+                <h5 class="project-title">AI-Based Project : Image Classification</h5>
+                <p class="project-desc">Deep Learning CNN app for clothing image search and classification.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">Python</span>
+                  <span class="badge bg-light text-dark me-1">Flask</span>
+                  <span class="badge bg-light text-dark me-1">HTML</span>
+                  <span class="badge bg-light text-dark me-1">CSS</span>
+                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://gitlab.com/i2722/pfe_project" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <span class="project-date text-muted">04/2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/csnmaroc.png" class="project-img" alt="Accounting and Services">
+              <div class="project-body">
+                <h5 class="project-title">Accounting and Services</h5>
+                <p class="project-desc">Website for an accounting and services company in Taliouine to showcase their services.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">PHP</span>
+                  <span class="badge bg-light text-dark me-1">HTML</span>
+                  <span class="badge bg-light text-dark me-1">CSS</span>
+                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://gitlab.com/Abdelaazizsabri/csnmaroc-site" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <span class="project-date text-muted">07/2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 6 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card h-100">
+              <img src="images/scholarshipapplication.png" class="project-img" alt="Scholarship Application">
+              <div class="project-body">
+                <h5 class="project-title">Scholarship Application</h5>
+                <p class="project-desc">App providing the latest information on scholarships worldwide.</p>
+                <div class="project-tech mb-2">
+                  <span class="badge bg-light text-dark me-1">PHP</span>
+                  <span class="badge bg-light text-dark me-1">HTML</span>
+                  <span class="badge bg-light text-dark me-1">CSS</span>
+                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://gitlab.com/i2722/scolarshipapplication" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                  <span class="project-date text-muted">08/2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Certifications Section -->
     <section class="certificates-section" id="certificates">
-        <h2 class="certificates-title text-center my-5" style="color: rgb(6, 5, 5) !important;">Certificates</h2>
+    <div class="text-center">
+    <h2 class="section-title text-center mb-5" style="color: rgb(6, 5, 5) !important;">Certificates</h2>
 
+        </div>
         <div class="row justify-content-center">
             <!-- Certificate 2 -->
             <a style="cursor: pointer;text-decoration: none;" class="col-md-3" href="https://learn.365datascience.com/certificates/CC-38FE5F934C/">
@@ -525,9 +556,9 @@
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
                     <h5>Contact Info</h5>
-                    <p><i class="fas fa-envelope"></i> email@example.com</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Your Location</p>
+                    <p><i class="fas fa-envelope"></i> azizsabri072@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+212671344804</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Agadir , morocco</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <h5>Connect With Me</h5>
@@ -540,7 +571,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2024 Your Name. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 Abdelaaziz Sabri. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -548,9 +579,17 @@
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: false,
+      offset: 100,
+    });
+  </script>
 </body>
 </html> 
