@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 
 .hero-title {
@@ -244,6 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-image-container {
     position: relative;
+    width: 500px;
     z-index: 2;
 }
 
@@ -271,12 +272,12 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     animation: float 3s ease-in-out infinite;
 }
 
 .floating-card i {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #6c5ce7;
 }
 
@@ -293,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card2 {
-    top: 40%;
+    top: 25%;
     right: -20px;
     animation-delay: 1s;
 }
