@@ -1,169 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Portfolio</title>
 
-<style>
-  /* Overall Section Styling */
-.services-section {
-  background-color: #f4f7fa !important;
-  padding: 60px 20px;
-}
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-h2.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #436850;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
-  position: relative;
-}
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-/* Adding a subtle underline animation */
-h2.section-title::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 4px;
-  background-color: #436850;
-  bottom: 0;
-  left: 25%;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.4s ease-in-out;
-}
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-h2.section-title:hover::after {
-  transform: scaleX(1);
-}
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
 
-/* Service Box Styling */
-.service-box {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  margin-bottom: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid #436850;
-}
+  <style>
+    /* General page styling */
+    body {
+      background-color: #f4f7fa;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
 
-.service-box h3 {
-  font-size: 1.75rem;
-  color: #436850;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
+    /* Nav placeholder */
+    #nav-placeholder {
+      min-height: 70px;
+    }
 
-.service-box p {
-  color: #757575;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
+    /* Section background with gradient overlay */
+    .services-section {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                  url('../images/coding_image.jpeg') no-repeat center center/cover;
+      padding: 100px 20px;
+      color: #fff;
+    }
 
-.service-box ul {
-  list-style: none;
-  padding-left: 0;
-  color: #555;
-}
+    /* Section title */
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 70px;
+      position: relative;
+      text-align: center;
+    }
 
-.service-box ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #28a745;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
 
-/* Hover Effects */
-.service-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
-}
+    /* Skill cards */
+    .service-box {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      color: #333;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* Animations for Service Boxes */
-.animated-box {
-  animation: fadeIn 1.2s ease-in-out;
-}
+    .service-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(67,104,80,0.4), rgba(40,167,69,0.3));
+      transition: left 0.6s ease;
+      z-index: 0;
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .service-box:hover::before {
+      left: 0;
+    }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .service-box {
-    padding: 20px;
-  }
+    .service-box h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #436850;
+      margin-bottom: 15px;
+      z-index: 1;
+      position: relative;
+    }
 
-  h2.section-title {
-    font-size: 2rem;
-  }
+    .service-box p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      z-index: 1;
+      position: relative;
+    }
 
-  .service-box h3 {
-    font-size: 1.5rem;
-  }
-}
+    .service-box ul {
+      list-style: none;
+      padding-left: 0;
+      z-index: 1;
+      position: relative;
+    }
 
-</style>
-<section class="services-section" id="skills" style="background-image: url(images/coding_image.jpeg);">
-  <h2 class="section-title  text-center my-5" style="color: white !important;">Skills</h2>
+    .service-box ul li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
 
-  <div class="row">
-    <!-- Data Science -->
-    <div class="col-lg-4 col-md-6">
-      <div class="service-box animated-box">
-        <h3>Data Science</h3>
-        <p>Mastering the art of transforming raw data into meaningful insights and AI models.</p>
-        <ul>
-          <li>Data Collection</li>
-          <li>Data Pre-processing</li>
-          <li>Data Analysis</li>
-          <li>Model Creation with Keras & TensorFlow</li>
-          <li>Model Testing & Optimization</li>
-          <li>Model Deployment (Django, Flask, Android)</li>
-          <li>Data Visualization</li>
-          <li>Deep Learning & LLMS</li>
-          <li>SQL & NoSQL Databases</li>
-        </ul>
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .service-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ Navigation dynamically loaded -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Skills Section -->
+  <section class="services-section" id="skills">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">My Skills</h2>
+      <div class="row g-4">
+
+        <!-- Data Science -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box">
+            <i class="fa-solid fa-chart-line fa-3x mb-3 text-success"></i>
+            <h3>Data Science</h3>
+            <p>Transforming raw data into predictive insights and smart AI models.</p>
+            <ul>
+              <li>Data Collection & Cleaning</li>
+              <li>Model Creation (Keras, TensorFlow)</li>
+              <li>Deployment (Django, Flask, Android)</li>
+              <li>Data Visualization</li>
+              <li>SQL / NoSQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Android Development -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box">
+            <i class="fa-brands fa-android fa-3x mb-3 text-success"></i>
+            <h3>Android Development</h3>
+            <p>Creating intuitive Android apps enhanced by AI-powered features.</p>
+            <ul>
+              <li>Kotlin, Jetpack Compose</li>
+              <li>Room Database, Firebase</li>
+              <li>REST APIs (Ktor, Retrofit)</li>
+              <li>MVVM Architecture</li>
+              <li>AI Model Integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box">
+            <i class="fa-solid fa-people-group fa-3x mb-3 text-success"></i>
+            <h3>Soft Skills</h3>
+            <p>Combining technical mastery with effective communication and teamwork.</p>
+            <ul>
+              <li>Languages: Arabic, French, English</li>
+              <li>Problem Solving</li>
+              <li>Leadership & Creativity</li>
+              <li>Project Management</li>
+              <li>Collaboration & Adaptability</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Android Development -->
-    <div class="col-lg-4 col-md-6">
-      <div class="service-box animated-box">
-        <h3>Android Development</h3>
-        <p>Implementing AI models to create intuitive and powerful Android applications.</p>
-        <ul>
-          <li>Kotlin Programming</li>
-          <li>Android Basics (Activity, Fragment, Lifecycle)</li>
-          <li>Jetpack Compose</li>
-          <li>Room Database</li>
-          <li>API Integration (Ktor, Retrofit)</li>
-          <li>Firebase Authentication & Firestore</li>
-          <li>MVVM Architecture</li>
-          <li>AI Models for Classification & Prediction</li>
-        </ul>
-      </div>
-    </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
 
-    <!-- Soft Skills -->
-    <div class="col-lg-4 col-md-6">
-      <div class="service-box animated-box">
-        <h3>Soft Skills</h3>
-        <p>Bridging the gap between technical expertise and effective communication with stakeholders.</p>
-        <ul>
-          <li>Languages: Arabic (Native), French (B1), English (B2)</li>
-          <li>Problem-Solving & Critical Thinking</li>
-          <li>Advanced Knowledge in Java, Kotlin, Python</li>
-          <li>Communication & Collaboration</li>
-          <li>Leadership & Project Management</li>
-          <li>Creativity & Innovation</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    // ✅ Always fetch the navigation
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../html/nav.html", { cache: "no-store" })
+        .then(res => {
+          if (!res.ok) throw new Error("Failed to load nav.html");
+          return res.text();
+        })
+        .then(html => {
+          document.getElementById("nav-placeholder").innerHTML = html;
+        })
+        .catch(err => console.error("Navigation load error:", err));
+    });
+  </script>
 
+</body>
+</html>

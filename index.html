@@ -25,41 +25,17 @@
   </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#" data-aos="fade-right">
-                <span class="brand-text">Sabri</span>
-                <span class="brand-dot">Abdelaaziz</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
-                        <a class="nav-link contact-btn" href="#footer">Get in Touch</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <!-- Include another page -->
+    <div id="nav-placeholder"></div>
+
+<script>
+  fetch('html/nav.html') // path to your HTML file
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -88,7 +64,7 @@
                             Transforming data into meaningful insights and building intelligent solutions.
                         </p>
                         <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
-                            <a href="#projects" class="btn btn-primary btn-lg me-3">
+                            <a href="#projects" class="btn btn-primary btn-lg mt-3 me-3">
                                 View Projects <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                             <a href="#contact" class="btn btn-outline-primary btn-lg">
@@ -103,7 +79,7 @@
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             <a href="#" class="social-icon" target="_blank">
-                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
                     </div>
@@ -413,69 +389,43 @@
               </div>
             </div>
           </div>
-          <!-- Project Card 4 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <img src="images/fashionStore.png" class="project-img" alt="AI-Based Project : Image Classification">
-              <div class="project-body">
-                <h5 class="project-title">AI-Based Project : Image Classification</h5>
-                <p class="project-desc">Deep Learning CNN app for clothing image search and classification.</p>
-                <div class="project-tech mb-2">
-                  <span class="badge bg-light text-dark me-1">Python</span>
-                  <span class="badge bg-light text-dark me-1">Flask</span>
-                  <span class="badge bg-light text-dark me-1">HTML</span>
-                  <span class="badge bg-light text-dark me-1">CSS</span>
-                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://gitlab.com/i2722/pfe_project" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                  <span class="project-date text-muted">04/2023</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Project Card 5 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <img src="images/csnmaroc.png" class="project-img" alt="Accounting and Services">
-              <div class="project-body">
-                <h5 class="project-title">Accounting and Services</h5>
-                <p class="project-desc">Website for an accounting and services company in Taliouine to showcase their services.</p>
-                <div class="project-tech mb-2">
-                  <span class="badge bg-light text-dark me-1">PHP</span>
-                  <span class="badge bg-light text-dark me-1">HTML</span>
-                  <span class="badge bg-light text-dark me-1">CSS</span>
-                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://gitlab.com/Abdelaazizsabri/csnmaroc-site" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                  <span class="project-date text-muted">07/2022</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Project Card 6 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="project-card h-100">
-              <img src="images/scholarshipapplication.png" class="project-img" alt="Scholarship Application">
-              <div class="project-body">
-                <h5 class="project-title">Scholarship Application</h5>
-                <p class="project-desc">App providing the latest information on scholarships worldwide.</p>
-                <div class="project-tech mb-2">
-                  <span class="badge bg-light text-dark me-1">PHP</span>
-                  <span class="badge bg-light text-dark me-1">HTML</span>
-                  <span class="badge bg-light text-dark me-1">CSS</span>
-                  <span class="badge bg-light text-dark me-1">Bootstrap</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://gitlab.com/i2722/scolarshipapplication" target="_blank" class="btn btn-outline-primary btn-sm me-2" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                  <span class="project-date text-muted">08/2022</span>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
+   <!-- See More / More Projects Button -->
+<div class="text-center mt-5">
+  <a href="html/projects.html" class="btn btn-lg btn-outline-success see-more-btn">
+    See More Projects <i class="fas fa-arrow-right ms-2"></i>
+  </a>
+</div>
+
+<style>
+/* See More Button */
+.see-more-btn {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.see-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: linear-gradient(135deg, #22c1c3, #fdbb2d);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.see-more-btn:hover i {
+  transform: translateX(6px);
+}
+</style>
+
     </section>
 
     <!-- Certifications Section -->
