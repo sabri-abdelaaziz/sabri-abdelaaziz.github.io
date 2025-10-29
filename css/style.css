@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     overflow: hidden;
     padding-top: 80px;
-    padding-bottom: 120px; /* Add more space at bottom */
+    padding-bottom: 60px; /* Add more space at bottom */
 }
 
 .hero-particles {
@@ -1056,32 +1056,55 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Education Section Styles */
 .roadmap {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100px;
-    background-color: #f5f5f5;
-    padding: 20px;
-    box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  max-width: 900px;
 }
 
 .road {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(to right, #9771c8, #390265);
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-left: 3px solid var(--border-color);
 }
 
 .point {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  margin: 2rem 0 2rem 2rem;
+  padding-left: 2rem;
 }
 
+.circle {
+  position: absolute;
+  left: -1.2rem;
+  top: 0.4rem;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.dev {
+  background: var(--light-gray);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+.dev:hover {
+  background: var(--background-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+.dev h5 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
 .point .circle {
     width: 20px;
     height: 20px;
@@ -1091,86 +1114,193 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.point .dev h5,
-.point .dev h6 {
-    margin: 5px 0;
-    font-size: 14px;
+.dev h6 {
+  color: var(--accent-color);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
 
-.point[data-year="2021"] { left: 5%; top: -40px; }
-.point[data-year="2022"] { left: 40%; top: -40px; }
-.point[data-year="2023"] { left: 80%; top: -40px; }
-/* .point[data-year="2024"] { left: 75%; top: -40px; } */
 
-.point:before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 20px;
-    background-color: #6b8e23;
-    left: 50%;
-    top: 10px;
-    z-index: -1;
-    border-radius: 10px 1px 10px 1px;
+
+
+/* Desktop layout: alternate sides */
+
+.education-section {
+  background: linear-gradient(180deg, #f9fafb 0%, #eef7f1 100%);
+  color: #333;
 }
 
-.point:first-child:before {
-    display: none;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1d5a3f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
 }
 
-.text_color {
-    color: white;
-    text-shadow: 1px 1px 1px black;
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #28a745;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
-.roadmap p {
-    font-size: 1.2rem;
-    font-weight: 600;
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  padding-left: 40px;
+  border-left: 3px solid #28a745;
+  max-width: 700px;
 }
 
-/* Make it responsive */
-@media screen and (max-width: 768px) {
-    .road {
-        height: 30px;
-    }
-
-    .point .circle {
-        width: 15px;
-        height: 15px;
-    }
-
-    .point .dev h5, 
-    .point .dev h6 {
-        font-size: 10px;
-    }
-
-    .point[data-year="2021"] { left: 5%; top: -30px; }
-    .point[data-year="2022"] { left: 20%; top: 15px; }
-    .point[data-year="2023"] { left: 60%; top: -30px; }
-    .point[data-year="2024"] { left: 90%; top: 15px; }
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 480px) {
-    .road {
-        height: 20px;
-    }
-
-    .point .circle {
-        width: 10px;
-        height: 10px;
-    }
-
-    .point .dev h5, 
-    .point .dev h6 {
-        font-size: 10px;
-    }
-
-    .point[data-year="2021"] { left: 5%; top: -20px; }
-    .point[data-year="2022"] { left: 15%; top: -20px; }
-    .point[data-year="2023"] { left: 65%; top: -20px; }
-    .point[data-year="2024"] { left: 90%; top: -20px; }
+.timeline-item:hover .timeline-icon {
+  background-color: #28a745;
+  color: #fff;
+  transform: scale(1.1);
 }
 
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Icon */
+.timeline-icon {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  background-color: #fff;
+  border: 3px solid #28a745;
+  color: #28a745;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.timeline-content h5 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1d5a3f;
+}
+
+.timeline-content .edu-year {
+  font-weight: 600;
+  color: #28a745;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Hover Animation */
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Layout */
+@media (max-width: 576px) {
+  .timeline {
+    padding-left: 25px;
+    border-left: 2px solid #28a745;
+  }
+
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+    left: -20px;
+    font-size: 1rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 991px) and (min-width: 576px) {
+  .road {
+    border-left: 3px solid var(--border-color);
+  }
+
+  .point {
+    margin-left: 2rem;
+    padding-left: 2rem;
+  }
+
+  .dev {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 575px) {
+  .roadmap {
+    padding: 1rem 0;
+  }
+
+  .road {
+    border-left: 2px solid var(--border-color);
+    margin-left: 1rem;
+  }
+
+  .point {
+    margin: 1.5rem 0 1.5rem 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .circle {
+    left: -0.9rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .dev {
+    padding: 0.8rem 1rem;
+  }
+
+  .dev h5 {
+    font-size: 1rem;
+  }
+
+  .dev h6 {
+    font-size: 0.85rem;
+  }
+}
 /* Project Card Styles */
 .project-card {
     display: block;
