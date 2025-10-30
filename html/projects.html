@@ -1,37 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio Projects</title>
-  <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- AOS Animation -->
- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- AOS Animation -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<!-- Custom CSS -->
 <link rel="stylesheet" href="../css/style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+  /* General Body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #f5f5f5;
   margin: 0;
   padding: 0;
 }
+
+/* Section Titles */
 h2.section-title {
   text-align: center;
-  margin: 50px 0 10px 0;
+  margin: 50px 0 10px;
   color: #436850;
   font-size: 2.5rem;
   font-weight: 700;
   text-shadow: 1px 1px #e5e5e5;
 }
+
 p.section-subtitle {
   text-align: center;
   margin-bottom: 40px;
@@ -47,6 +51,7 @@ p.section-subtitle {
   gap: 12px;
   margin-bottom: 30px;
 }
+
 .category-button {
   background: linear-gradient(135deg, #6a85b6, #4a6691);
   color: white;
@@ -57,79 +62,118 @@ p.section-subtitle {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .category-button:hover {
   background: linear-gradient(135deg, #4a6691, #6a85b6);
   transform: scale(1.05);
 }
+
 .category-button.active {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #22c1c3, #fdbb2d);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
 }
 
 /* Projects Grid */
 #project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  justify-items: center;
   padding: 0 20px;
 }
 
-/* Project Card */
+/* Project Card - Modern Look */
 .project-card {
-  width: 100%;
+  width: 320px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
+
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
+
+/* Project Image */
 .project-card img.project-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img.project-image {
+  transform: scale(1.05);
 }
 
 /* Card Content */
 .card-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 .card-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #436850;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
+
 .card-text {
-  font-size: 14px;
+  font-size: 0.95rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
+  flex-grow: 1;
 }
+
+/* Tech Tags */
 .langs span {
+  display: inline-block;
   background: #eee;
   color: #333;
   font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 12px;
-  margin-right: 4px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin: 0 5px 5px 0;
+  transition: all 0.3s ease;
 }
 
-/* Links */
-.project-links a {
-  margin-right: 10px;
-  display: inline-block;
-}
-.project-links img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.2s ease;
-}
-.project-links img:hover {
+.langs span:hover {
   transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-links a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-links a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Date Label */
+.card-date {
+  font-size: 0.8rem;
+  color: #999;
 }
 
 /* See More Button */
@@ -145,6 +189,7 @@ p.section-subtitle {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 #see-more:hover {
   transform: scale(1.05);
 }
@@ -155,26 +200,32 @@ p.section-subtitle {
     padding: 8px 20px;
     font-size: 14px;
   }
+  .project-card {
+    width: 100%;
+    max-width: 90%;
+  }
 }
+
 </style>
 </head>
 <body>
 
+<!-- Navbar Placeholder -->
 <div id="bar-placeholder" class="py-4"></div>
 
 <section id="projects" class="projects-section py-5 mt-6">
   <div class="container">
-    <div class="text-center mb-5">
-      <p class="section-subtitle">A selection of my best work in Android, AI, Django, and Web Development</p>
-    </div>
+    <div class="text-center mb-1">
+   <!--   <p class="section-subtitle">A selection of my best work in Android, AI, Web applications, and Web Development</p>-->
+     </div>
 
     <!-- Category Buttons -->
     <div id="category-list" class="category-list">
       <button class="category-button active" data-category="all">All Projects</button>
       <button class="category-button" data-category="ai">AI</button>
-      <button class="category-button" data-category="django">Django</button>
+      <button class="category-button" data-category="cloud_iot">Cloud and IoT</button>
+      <button class="category-button" data-category="webapps">Web Apps</button>
       <button class="category-button" data-category="android">Android</button>
-      <button class="category-button" data-category="others">Others</button>
     </div>
 
     <!-- Projects Grid -->
@@ -183,42 +234,201 @@ p.section-subtitle {
   </div>
 </section>
 
+<!-- Project Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex flex-column flex-lg-row align-items-center">
+        <img id="modalImage" src="" alt="" class="img-fluid mb-3 mb-lg-0 me-lg-4" style="max-width: 500px; border-radius: 15px;">
+        <div>
+          <div class="langs mb-3" id="modalTech"></div>
+          <p id="modalDesc" class="mb-2"></p>
+          <div id="modalLinks" class="d-flex align-items-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 // Project Data
 const allProjects = [
-    {id: 1, category: "ai", title: "AI-Based Fashion Classifier", desc: "Application to search for clothing using Deep Learning CNN.", image: "../images/fashionStore.png", tech: ["Python","Flask","HTML"], gitlab:"https://gitlab.com/i2722/pfe_project", date:"04/2023"},
-  {id: 2, category: "android", title: "Stock Management APP", desc: "Android app that allows store owners to manage inventory efficiently.", image: "../images/invoiceMaker.png", tech: ["Kotlin","Android","RoomDB","MVVM"], github:"https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main", date:"08/2024"},
-  {id: 3, category: "django", title: "Taliouine Municipality App", desc: "Online services for residents using Django for local community management.", image: "../images/commune.png", tech: ["Python","Django","HTML","CSS"], github:"https://github.com/sabri-abdelaaziz/communeTaliouine", date:"06/2023"},
- {id: 4, category: "others", title: "Accounting & Services Website", desc: "Website for a company showcasing services in Taliouine.", image: "../images/csnmaroc.png", tech: ["PHP","HTML","CSS"], gitlab:"https://gitlab.com/Abdelaazizsabri/csnmaroc-site", date:"07/2022"},
-  {id: 5, category: "android", title: "Gemini Pro AI", desc: "Android implementation of Google's Gemini Pro API for intuitive AI interactions.", image:"../images/gmini.jpeg", tech:["Android","AI","Gemini"], github:"https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test", date:"01/2024"},
-  {id: 6, category: "django", title:"Local Community Portal", desc:"Django portal for local services", image:"../images/commune2.png", tech:["Python","Django"], github:"https://github.com/example", date:"03/2024"}
+  {
+    id: 9,
+    category: ["ai", "webapps"],
+    title: "Face Bluring App",
+    desc: "A Web application that detects and recognizes faces in real-time using OpenCV and TensorFlow Lite. It provides live face detection through the device camera, supports multiple faces, and highlights detected faces with bounding boxes. The app demonstrates AI integration on mobile devices and real-time computer vision processing.",
+    image: "../images/projets/face_detection.jpeg",
+    tech: ["Django", "OpenCV", "Face Detection", "AI"],
+    github: "https://github.com/sabri-abdelaaziz/face-blur",
+    date: "07/2024"
+  },
+  {
+    id: 1,
+    category: ["ai"],
+    title: "AI-Based Fashion Classifier",
+    desc: "A deep learning web application that classifies clothing images using a Convolutional Neural Network (CNN). Built with Python and Flask, it allows users to upload a clothing image and receive instant predictions about its category (e.g., shirt, dress, pants). The model was trained on a large dataset and deployed with a clean web interface, providing an accessible AI-powered shopping experience.",
+    image: "../images/fashionStore.png",
+    tech: ["Python", "Flask", "Deep Learning", "CNN", "HTML"],
+    gitlab: "https://gitlab.com/i2722/pfe_project",
+    date: "04/2023"
+  },
+  {
+    id: 8,
+    category: ["ai", "webapps"],
+    title: "Diabetes Prediction System",
+    desc: "A web application that predicts the likelihood of diabetes in patients using machine learning algorithms. Built with Python, Flask, and scikit-learn, it allows users to input personal health parameters and receive an instant prediction. The project emphasizes accurate prediction, interactive UI, and easy integration of ML models into web platforms.",
+    image: "../images/projets/diabetes_prediction.png",
+    tech: ["Python", "Flask", "scikit-learn", "Machine Learning", "HTML/CSS"],
+    github: "https://github.com/sabri-abdelaaziz/diabetes_prediction",
+    colab:"https://colab.research.google.com/drive/10BzZrPmUij5ASd0uYsqmdeSResbVW5a_#scrollTo=JslNo1iHoDST",
+    date: "05/2024"
+  },
+    {
+    id: 6,
+    category: ["cloud_iot"],
+    title: "Smart Weather Station (IoT + Cloud)",
+    desc: "An intelligent IoT-based weather monitoring system that collects real-time environmental data such as temperature, humidity, and air pressure using sensors (DHT22, BMP280). The data is transmitted via an ESP32 microcontroller to Microsoft Azure IoT Hub, where it is stored and visualized. A Django web dashboard displays live sensor readings, historical trends, and environmental analytics using dynamic charts.",
+    image: "../images/projets/station_meteo.png",
+    tech: ["Python", "Django", "Azure IoT", "ESP32", "Sensors"],
+    github: "https://github.com/sabri-abdelaaziz/WeatherStation-IoT",
+    date: "03/2024"
+  },
+ 
+ {
+    id: 2,
+    category: ["webapps"],
+    title: "FSA Faculty Website Development Internship",
+    desc: "A web development internship focused on redesigning and maintaining the official website of the Faculty of Sciences Aït Melloul. Responsibilities included improving UI/UX design, implementing new features, and integrating Django-based backend components. The result was a cleaner, faster, and more accessible website for students and staff.",
+    image: "../images/fsa.png",
+    github:"https://github.com/yoel3imari/fsa-platform",
+    tech: ["HTML", "CSS", "JavaScript", "Python", "Django"],
+    date: "07/2025"
+  } ,
+  {
+    id: 3,
+    category: ["webapps"],
+    title: "Taliouine Municipality App",
+    desc: "A full-stack Django web application developed for the local municipality of Taliouine. It provides residents with access to online administrative services, announcements, and document requests. The platform features a responsive design, role-based access control for employees and citizens, and an admin dashboard for managing municipal data securely and efficiently.",
+    image: "../images/commune.png",
+    tech: ["Python", "Django", "Bootstrap", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/sabri-abdelaaziz/communeTaliouine",
+    date: "06/2023"
+  },
+  {
+    id: 4,
+    category: ["webapps"],
+    title: "Accounting & Services Website",
+    desc: "A professional corporate website built for CSN Maroc, an accounting and consulting firm. The platform showcases company services, provides a contact interface, and highlights team expertise. It’s designed with a modern responsive layout using PHP, HTML, CSS, and Bootstrap, ensuring fast loading times and clean navigation for potential clients.",
+    image: "../images/csnmaroc.png",
+    tech: ["PHP", "Bootstrap", "HTML", "CSS", "JavaScript"],
+    gitlab: "https://gitlab.com/Abdelaazizsabri/csnmaroc-site",
+    date: "07/2022"
+  },
+  {
+    id: 5,
+    category: ["android","ai"]
+,
+    title: "Gemini Pro AI Assistant",
+    desc: "An intelligent Android application integrating Google’s Gemini Pro API to deliver natural and context-aware AI interactions. The app enables users to ask questions, generate text, and perform creative tasks in real-time. Built with Kotlin, it leverages Material Design 3 for an elegant interface and handles asynchronous communication using Kotlin coroutines for a smooth experience.",
+    image: "../images/gmini.jpeg",
+    tech: ["Kotlin", "Android", "AI", "Gemini API", "Material 3"],
+    github: "https://github.com/sabri-abdelaaziz/Kotlin_Generative_AI_test",
+    date: "01/2024"
+  },
+ {
+    id: 7,
+    category: ["android"],
+    title: "Stock Management App",
+    desc: "An Android application designed to help store owners efficiently manage their inventory and track product movements. The app supports adding, updating, and deleting items, managing clients and orders, and generating PDF invoices. It’s built using Kotlin with the MVVM architecture and Room Database for offline data persistence, ensuring a fast, reliable, and modern mobile experience.",
+    image: "../images/invoiceMaker.png",
+    tech: ["Kotlin", "Android", "RoomDB", "MVVM", "PDF"],
+    github: "https://github.com/sabri-abdelaaziz/InventoryManagement/tree/main",
+    date: "08/2024"
+  },
+
+
+ 
+  
 ];
 
-let displayedProjects = 4; // initial number of projects shown
+let displayedProjects = allProjects.length;
 
-// Function to render projects
+// Render Projects
 function renderProjects(projects, limit = projects.length) {
   const container = document.getElementById('project-list');
   container.innerHTML = "";
   projects.slice(0, limit).forEach(proj => {
     const card = document.createElement('div');
-    card.className = "project-card";
-    card.innerHTML = `
-      <img class="project-image" src="${proj.image}" alt="${proj.title}">
-      <div class="card-body">
-        <h5 class="card-title">${proj.title}</h5>
-        <div class="langs d-flex align-items-center">
-          ${proj.tech.map(t => `<span>${t}</span>`).join('')}
+card.className = "project-card shadow-sm";
+
+card.innerHTML = `
+  <div class="card-image-wrapper" style="position: relative; overflow: hidden; border-radius: 20px;">
+    <img class="project-image" src="${proj.image}" alt="${proj.title}" style="width:100%; height:200px; object-fit:cover; transition: transform 0.4s ease;">
+    <div class="image-overlay" style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(34, 193, 195, 0.25);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    "></div>
+  </div>
+
+  <div class="card-body" style="padding: 20px; display:flex; flex-direction:column;">
+    <h5 class="card-title" style="font-size:1.25rem; font-weight:700; color:#436850; margin-bottom:10px;">${proj.title}</h5>
+    
+    <div class="langs d-flex flex-wrap mb-3">
+      ${proj.tech.map(t => `<span style="
+        display:inline-block; 
+        background:#eee; 
+        color:#333; 
+        font-size:12px; 
+        font-weight:500; 
+        padding:4px 10px; 
+        border-radius:50px; 
+        margin:0 5px 5px 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      ">${t}</span>`).join('')}
+    </div>
+    
+    <p class="card-text" style="font-size:0.95rem; color:#555; line-height:1.5; flex-grow:1;">${proj.desc}</p>
+    
+    <div class="project-links d-flex align-items-center mt-3 justify-content-between">
+      <div>
+        ${proj.github ? `<a href="${proj.github}" target="_blank"><img src="../images/github_icon.jpg" alt="GitHub" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
+        ${proj.gitlab ? `<a href="${proj.gitlab}" target="_blank"><img src="../images/gitlab.jpg" alt="GitLab" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
+              ${proj.colab ? `<a href="${proj.colab}" target="_blank"><img src="../images/projets/colab.png" alt="colab" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
         </div>
-        <p class="card-text">${proj.desc}</p>
-        <div class="project-links d-flex align-items-center mt-3">
-          ${proj.github ? `<a href="${proj.github}" target="_blank"><img src="../images/github_icon.jpg" alt="GitHub"></a>` : ""}
-          ${proj.gitlab ? `<a href="${proj.gitlab}" target="_blank"><img src="../images/gitlab.jpg" alt="GitLab"></a>` : ""}
-          <span class="card-date text-muted ms-auto">${proj.date}</span>
-        </div>
-      </div>
-    `;
-    container.appendChild(card);
+      <span class="card-date text-muted" style="font-size:0.8rem; color:#999;">${proj.date}</span>
+    </div>
+  </div>
+`;
+
+// Hover Effects
+card.addEventListener('mouseenter', () => {
+  const img = card.querySelector('.project-image');
+  const overlay = card.querySelector('.image-overlay');
+  img.style.transform = "scale(1.05)";
+  overlay.style.opacity = "1";
+});
+
+card.addEventListener('mouseleave', () => {
+  const img = card.querySelector('.project-image');
+  const overlay = card.querySelector('.image-overlay');
+  img.style.transform = "scale(1)";
+  overlay.style.opacity = "0";
+});
+
+container.appendChild(card);
+
   });
 }
 
@@ -231,43 +441,46 @@ document.querySelectorAll('.category-button').forEach(btn => {
     document.querySelectorAll('.category-button').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     const category = btn.dataset.category;
-    const filtered = category === 'all' ? allProjects : allProjects.filter(p => p.category === category);
-    displayedProjects = 4; // reset to initial
-    renderProjects(filtered, displayedProjects);
-
-    // Show/hide "See More" button
-    document.getElementById('see-more').style.display = filtered.length > displayedProjects ? 'block' : 'none';
+   const filtered = category === 'all' 
+  ? allProjects 
+  : allProjects.filter(p => p.category.includes(category));
+ renderProjects(filtered, displayedProjects);
   });
 });
 
-// See More Button
-document.getElementById('see-more').addEventListener('click', () => {
-  const activeCategory = document.querySelector('.category-button.active').dataset.category;
-  const filtered = activeCategory === 'all' ? allProjects : allProjects.filter(p => p.category === activeCategory);
-  displayedProjects += 4;
-  renderProjects(filtered, displayedProjects);
+// Include Navbar
+fetch('nav.html')
+  .then(response => response.ok ? response.text() : Promise.reject('Error loading nav'))
+  .then(data => { document.getElementById('bar-placeholder').innerHTML = data; })
+  .catch(error => console.error(error));
 
-  if(displayedProjects >= filtered.length) {
-    document.getElementById('see-more').style.display = 'none';
-  }
+// Modal Logic
+const projectModal = new bootstrap.Modal(document.getElementById('projectModal'), {});
+
+function openProjectModal(proj) {
+  document.getElementById('projectModalLabel').innerText = proj.title;
+  document.getElementById('modalImage').src = proj.image;
+  document.getElementById('modalDesc').innerText = proj.desc;
+  document.getElementById('modalTech').innerHTML = proj.tech.map(t => `<span class="badge bg-secondary me-1">${t}</span>`).join('');
+  
+  const linksContainer = document.getElementById('modalLinks');
+  linksContainer.innerHTML = '';
+  if (proj.github) linksContainer.innerHTML += `<a href="${proj.github}" target="_blank" class="me-2"><img src="../images/github_icon.jpg" alt="GitHub" style="width:42px;height:32px;;"></a>`;
+  if (proj.gitlab) linksContainer.innerHTML += `<a href="${proj.gitlab}" target="_blank" class="me-2"><img src="../images/gitlab.jpg" alt="GitLab" style="width:42px;height:32px;;"></a>`;
+  linksContainer.innerHTML += `<span class="text-muted ms-auto">${proj.date}</span>`;
+
+  projectModal.show();
+}
+
+// Click event for modal popup
+document.getElementById('project-list').addEventListener('click', e => {
+  let card = e.target.closest('.project-card');
+  if (!card) return;
+  let index = Array.from(document.getElementById('project-list').children).indexOf(card);
+  let filtered = document.querySelector('.category-button.active').dataset.category;
+  let currentProjects = filtered === 'all' ? allProjects : allProjects.filter(p => p.category === filtered);
+  openProjectModal(currentProjects[index]);
 });
-</script>
-
-<!-- Placeholder in your main HTML -->
-
-
-<script>
-  fetch('nav.html') // path to your HTML file
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('bar-placeholder').innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading bar.html:', error);
-    });
 </script>
 
 </body>

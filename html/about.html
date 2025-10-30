@@ -3,108 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Data Scientist Portfolio</title>
-  <!-- Bootstrap CSS for layout -->
+  <title>About Me - Data Scientist Portfolio</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fa !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    #about {
+      padding: 80px 20px;
+    }
+
     /* Image Styling */
-    .animated-img {
-      border-radius: 30px; /* Rounded corners */
-      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-      transition: all 0.3s ease; /* Smooth transitions for hover effects */
-      object-fit: cover; /* Ensures the image covers the container without distorting */
-      width: 100%; /* Ensures the image is responsive */
-      will-change: transform, box-shadow; /* Optimizing performance for animations */
-      animation: fadeIn 1.2s ease-in-out; /* Apply the fade-in animation */
+    .profile-img {
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      object-fit: cover;
+      width: 100%;
+      height: 500px;
     }
 
-    /* Hover Effects */
-    .animated-img:hover {
-      transform: scale(1.05) rotate(2deg); /* Slight zoom and rotation effect */
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
-      transition: all 0.4s ease-in-out; /* Smooth transition for hover effects */
+    .profile-img:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
 
-    /* Fade-in animation */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* Text Container */
+    .about-text {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
     }
 
-    /* Optional: Add a scaling effect while scrolling */
-    @media (prefers-reduced-motion: no-preference) {
-      .animated-img {
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    .about-text:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      color: #00796b;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* Skills Section */
+    .skills {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #dce2e1;
+      color: white;
+      font-weight: 500;
+      padding: 6px 15px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skills span:hover {
+      background: #00796b;
+      transform: scale(1.05);
+    }
+
+    /* Buttons */
+    .btn-custom {
+      background: linear-gradient(135deg, #22c1c3, #fdbb2d);
+      color: white;
+      border-radius: 50px;
+      padding: 10px 25px;
+      margin-top: 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    @media(max-width: 768px) {
+      .profile-img {
+        height: 350px;
       }
-
-      .animated-img:hover {
-        transform: scale(1.1); /* Larger zoom effect */
+      .about-text {
+        padding: 30px 20px;
       }
-    }
-
-    /* Text styling */
-    #about p {
-      font-family: serif !important;
-      text-shadow: 2px 1px 2px white;
+      .about-text h2 {
+        font-size: 2rem;
+      }
     }
   </style>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- AOS Animation -->
- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
-<link rel="stylesheet" href="../css/style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
+
 <div id="bar-placeholder"></div>
 
-  <div class="container-fluid" id="about">
-    <div class="row d-flex align-items-center justify-content-evenly py-5">
-
-      <!-- Image Column -->
-      <div class="col-md-6 text-center mb-4 mb-md-0">
-        <img 
-          class="img-fluid animated-img" 
-          style="border-radius: 30px; box-shadow: 1px 1px 7px black; height: 490px;" 
-          src="../images/nki4.png" 
-          alt="Image Description">
-      </div>
-
-      <!-- Text Column -->
-      <div class="col-md-6">
-        <p class="fs-4 fw-bold w-100">
-          As a data scientist, I specialize in transforming complex data into actionable insights that drive strategic decision-making. With expertise in machine learning, statistical analysis, and data visualization, I harness the power of data to solve challenging problems across diverse industries. My passion for data science stems from my ability to uncover patterns, predict trends, and provide innovative solutions that add real value to businesses.<br><br>
-          This portfolio showcases my projects, methodologies, and the tools I use to extract meaningful information from raw data, demonstrating my skills in data-driven problem solving and analytical thinking.
-        </p>
-      </div>
-
+<section id="about" class="container">
+  <div class="row align-items-center justify-content-evenly">
+    
+    <!-- Image Column -->
+    <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right">
+      <img src="../images/nki4.png" alt="Profile Image" class="profile-img">
     </div>
-  </div>
 
-  <!-- Optional Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+    <!-- Text Column -->
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate Data Scientist specializing in transforming complex datasets into actionable insights. Skilled in machine learning, data visualization, and statistical modeling, I enjoy solving real-world problems with innovative, data-driven solutions. My goal is to help businesses make smarter decisions by uncovering patterns and predicting trends.
+        </p>
+
+        <div class="skills">
+          <span>Python</span>
+          <span>Kotlin</span>
+          <span>SQL</span>
+          <span>Machine Learning</span>
+          <span>Data Visualization</span>
+          <span>Deep Learning</span>
+        </div>
+
+        <div>
+          <a href="../files/Resume.pdf" class="btn btn-custom" target="_blank"><i class="fas fa-download me-2"></i>Download Resume</a>
+          <a href="/index.html#footer" class="btn btn-custom"><i class="fas fa-envelope me-2"></i>Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  fetch('nav.html') // path to your HTML file
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('bar-placeholder').innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading bar.html:', error);
-    });
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+
+  // Load Navbar
+  fetch('nav.html')
+    .then(res => res.ok ? res.text() : Promise.reject('Error loading nav'))
+    .then(data => document.getElementById('bar-placeholder').innerHTML = data)
+    .catch(err => console.error(err));
 </script>
 
 </body>
