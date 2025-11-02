@@ -266,10 +266,23 @@ const allProjects = [
     title: "Face Bluring App",
     desc: "A Web application that detects and recognizes faces in real-time using OpenCV and TensorFlow Lite. It provides live face detection through the device camera, supports multiple faces, and highlights detected faces with bounding boxes. The app demonstrates AI integration on mobile devices and real-time computer vision processing.",
     image: "../images/projets/face_detection.jpeg",
-    tech: ["Django", "OpenCV", "Face Detection", "AI"],
+    tech: ["Django", "OpenCV", "Face Detection", "AI","Python"],
     github: "https://github.com/sabri-abdelaaziz/face-blur",
     date: "07/2024"
   },
+  {
+    id: 10,
+    category: ["ai", "webapps"],
+    title: "Offensive Speech Detector (toxic-darija)",
+    desc: "A text classification application that detects offensive language in Moroccan Arabic (Darija) using fine-tuned BERT and AraBERT models. The system leverages NLP techniques and transformers to analyze text and classify content as offensive or non-offensive. The app also features an interactive Hugging Face Spaces interface, allowing users to test the model in real-time through a simple web-based interface. This project demonstrates AI-powered language understanding, model deployment." ,
+    image: "../images/projets/offensive_detector.png",
+    colab:"https://colab.research.google.com/drive/1Lw5EAQjXAnQ9jy1QiiZmVMbD-_JSxCVN",
+    hugginface:"https://huggingface.co/Abdelaaziz/toxic-darija-bert-classification",
+    tech: ["Django", "Hugging Face Transformers", "AraBERT", "NLP", "Deep Learning"],
+    github: "https://github.com/sabri-abdelaaziz/toxic-darija-bert-classification",
+    date: "11/2025"
+}
+,
   {
     id: 1,
     category: ["ai"],
@@ -406,6 +419,7 @@ card.innerHTML = `
         ${proj.github ? `<a href="${proj.github}" target="_blank"><img src="../images/github_icon.jpg" alt="GitHub" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
         ${proj.gitlab ? `<a href="${proj.gitlab}" target="_blank"><img src="../images/gitlab.jpg" alt="GitLab" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
               ${proj.colab ? `<a href="${proj.colab}" target="_blank"><img src="../images/projets/colab.png" alt="colab" style="width:42px;height:32px;; transition: transform 0.3s ease;"></a>` : ""}
+               ${proj.hugginface ? `<a href="${proj.hugginface}" target="_blank"><img src="../images/projets/huggingface.png" alt="hugging face" style="width:82px;height:62px;; transition: transform 0.3s ease;"></a>` : ""}
         </div>
       <span class="card-date text-muted" style="font-size:0.8rem; color:#999;">${proj.date}</span>
     </div>
