@@ -243,9 +243,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-image-container {
     position: relative;
-    width: 500px;
+    width: 100%; /* make it responsive */
+    max-width: 500px; /* optional fixed max-width */
+    height: 300px; /* same height as your inline style for carousel images */
     z-index: 2;
 }
+
 
 .hero-image {
     position: relative;
@@ -255,9 +258,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-image img {
+    width: 100%;
+    height: 100%; /* make image take full container height */
+    object-fit: cover; /* keeps aspect ratio, crops if necessary */
     border-radius: 20px;
     transition: all 0.5s ease;
 }
+
 
 .hero-image:hover img {
     transform: scale(1.05);
